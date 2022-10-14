@@ -7,13 +7,12 @@ import LaundryPage from './pages/LaundryPage';
 export default function App() {
   return (
     <div className="App">
-
        <Routes>
-                <Route path="/" element={<HomePage/>}/>
-                <Route path="/kitchen" element={<KitchenPage/>} />
-                <Route path="/laundry" element={<LaundryPage/>}/>
-                <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/kitchen" element={<KitchenPage/>} />
+          <Route path="/laundry" element={<LaundryPage/>}/>
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
     </div>
   );
 }
