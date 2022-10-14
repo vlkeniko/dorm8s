@@ -14,6 +14,12 @@ export default function Nav() {
         <NavLink className="navlink" to="/laundry">
           Laundry
         </NavLink>
+        <NavLink className="navlink" to="/finances">
+          Finances
+        </NavLink>
+        <NavLink className="navlink" to="/profile">
+          Profile
+        </NavLink>
         </nav>
     );
 }
