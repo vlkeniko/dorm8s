@@ -6,11 +6,9 @@ import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import WM from "../components/WM";
 import PostCard from "../components/PostCard.js";
-//import { getUser } from '../utils/database_functions.js';
+import { endpoint } from '../utils/database_functions.js';
 
 export default function HomePage() {
-  let endpoint = "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app";
-
   const [wms, setWms] = useState([]);
   const [users, setUsers] = useState([]);
   const [items, setItems] = useState([]);

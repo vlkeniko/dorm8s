@@ -1,4 +1,4 @@
-let endpoint = "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app";
+export let endpoint = "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app";
 
 /* MANAGING USERS */
 /* Get one user's data */
