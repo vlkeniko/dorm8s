@@ -4,19 +4,17 @@ import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import WM from "../components/WM";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import PostCard from "../components/PostCard.js";
 
 export default function HomePage() {
-  /* const params = useParams();
-  const currentuser = JSON.parse(params.user);
-  console.log(currentuser) */
-
   const [wms, setWms] = useState([]);
   const [users, setUsers] = useState([]);
+  const [items, setItems] = useState([]);
+  const [leases, setLeases] = useState([]);
 
   async function getWms() {
-    const url = "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/WachingMachines.json";
+    const url =
+      "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/WachingMachines.json";
     const response = await fetch(url);
     const data = await response.json();
     let result = Object.keys(data).map((key) => ({
@@ -27,33 +25,57 @@ export default function HomePage() {
   }
 
   async function getUsers() {
-    const url = "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Users.json";
+    const url =
+      "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Users.json";
     const response = await fetch(url);
     const data = await response.json();
-    setUsers(data);
+    let result = Object.keys(data).map((key) => ({
+      id: key,
+      ...data[key],
+    }));
+    setUsers(result);
+  }
+
+  async function getItems() {
+    const url =
+      "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Items.json";
+    const response = await fetch(url);
+    const data = await response.json();
+    let result = Object.keys(data).map((key) => ({
+      id: key,
+      ...data[key],
+    }));
+    setItems(result);
+  }
+
+  async function getLeases() {
+    const url =
+      "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Leases.json";
+    const response = await fetch(url);
+    const data = await response.json();
+    let result = Object.keys(data).map((key) => ({
+      id: key,
+      ...data[key],
+    }));
+    setLeases(result);
   }
 
   useEffect(() => {
     getWms();
     getUsers();
+    getItems();
+    getLeases();
   }, []);
-
-  let html = "";
 
   return (
     <>
       <article>
         <h1>Washing overview</h1>
-        {/* <p>You are logged in as {currentuser.username}</p> */}
         <div style={{ display: "flex", flexDirection: "column", width: "70%" }}>
-          
-          {
-            wms.map((wm, i) => {     
-              console.log("Entered");                 
-              // Return the element. Also pass key     
-              return (<PostCard key={wm.id} wm={wm} users={users} />) 
-            })
-          }
+          {wms.map((wm, i) => {
+            // Return the element. Also pass key
+            return <PostCard key={wm.id} wm={wm} users={users} />;
+          })}
         </div>
       </article>
 
@@ -64,5 +86,4 @@ export default function HomePage() {
       <Nav />
     </>
   );
- 
 }
