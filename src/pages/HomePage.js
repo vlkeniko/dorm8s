@@ -1,62 +1,57 @@
 import React from "react";
+import { useEffect, useState } from "react";
+
 import Balance from "../components/Balance";
 import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import WM from "../components/WM";
-import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard.js";
+//import { getUser } from '../utils/database_functions.js';
 
 export default function HomePage() {
+  let endpoint = "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app";
+
   const [wms, setWms] = useState([]);
   const [users, setUsers] = useState([]);
   const [items, setItems] = useState([]);
   const [leases, setLeases] = useState([]);
 
-  async function getWms() {
-    const url =
-      "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/WachingMachines.json";
+  /* Getting data from an endpoint */
+  async function getFromEndpoint(url) {
     const response = await fetch(url);
     const data = await response.json();
     let result = Object.keys(data).map((key) => ({
       id: key,
       ...data[key],
     }));
+    return result;
+  }
+
+  /* Getting washing machine data */
+  async function getWms() {
+    const url = `${endpoint}/WashingMachines.json`;
+    let result = await getFromEndpoint(url);
     setWms(result);
   }
 
+  /* Getting user data */
   async function getUsers() {
-    const url =
-      "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Users.json";
-    const response = await fetch(url);
-    const data = await response.json();
-    let result = Object.keys(data).map((key) => ({
-      id: key,
-      ...data[key],
-    }));
+    const url = `${endpoint}/Users.json`;
+    let result = await getFromEndpoint(url);
     setUsers(result);
   }
 
+  /* Getting items data */
   async function getItems() {
-    const url =
-      "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Items.json";
-    const response = await fetch(url);
-    const data = await response.json();
-    let result = Object.keys(data).map((key) => ({
-      id: key,
-      ...data[key],
-    }));
+    const url = `${endpoint}/Items.json`;
+    let result = await getFromEndpoint(url);
     setItems(result);
   }
 
+  /* Getting leases data */
   async function getLeases() {
-    const url =
-      "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Leases.json";
-    const response = await fetch(url);
-    const data = await response.json();
-    let result = Object.keys(data).map((key) => ({
-      id: key,
-      ...data[key],
-    }));
+    const url = `${endpoint}/Leases.json`;
+    let result = await getFromEndpoint(url);
     setLeases(result);
   }
 
