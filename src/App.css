@@ -1,4 +1,8 @@
-
+body{
+  padding: 0;
+  margin:0;
+  border:0;
+}
 /*Colors*/
 :root {
   --main-color:rgb(0, 0, 0);
@@ -42,8 +46,11 @@ h3{
   width: 100%;
   bottom:0;
   border: 2px solid var(--main-color);
- 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--light-gray);
+  text-decoration: none;
+  font-size: 10px;
+  
  }
 
  .navlink{

@@ -46,11 +46,7 @@ export default function HomePage() {
           formData.password === user.password
         ) {
           console.log("bingo");
-          const currentuser = {
-            id: user.id,
-            name: user.username,
-          };
-          navigate(`wash/${JSON.stringify(currentuser)}`);
+          navigate(`/profile`);
         }
       }
     } else {
@@ -90,8 +86,8 @@ export default function HomePage() {
           </label>
         </fieldset>
       </form>
-      <p>Her: Nina, hello123</p>
-      <p>Him: Morten, hi123</p>
+      <p>name, password</p>
+
     </>
   );
 }

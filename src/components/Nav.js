@@ -20,6 +20,10 @@ export default function Nav() {
         <NavLink className="navlink" to="/profile">
           Profile
         </NavLink>
+        <NavLink className="navlink" to="/login
+        ">
+          Log in
+        </NavLink>
         </nav>
     );
 }
