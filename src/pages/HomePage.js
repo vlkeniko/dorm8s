@@ -4,7 +4,6 @@ import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import WM from "../components/WM";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import PostCard from "../components/PostCard.js";
 
 export default function HomePage() {
