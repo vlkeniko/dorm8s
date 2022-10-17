@@ -3,8 +3,6 @@ export default function PostCard(props) {
   const users = props.users;
   let user, avatar;
   let isBooked = false;
-  /* console.log(wms);
-   console.log(users); */
 
   // Lookup the user who has booked (if any)
   //const bookedby = users.filter((user) => user.userid === wms.userid);
@@ -26,16 +24,12 @@ export default function PostCard(props) {
         <div>id: {wm.id}</div>
         <div>status: {wm.status}</div>
         <div>booked by: {wm.userid}</div>
-        { console.log(wm) }
-        {/* <div>brand: {wms.brand}</div> */}
-        {/* <div>time: {wms.time}</div> */}
         <div>
-        {
-        isBooked ? (
-        <img src={avatar} alt="person" style={{ width: "50px" }} />
-        ):
-        (<span>No avatar</span>)
-        }
+          {isBooked ? (
+            <img src={avatar} alt="person" style={{ width: "50px" }} />
+          ) : (
+            <span>No avatar</span>
+          )}
         </div>
         <button>Book</button>
       </div>
