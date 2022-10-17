@@ -23,7 +23,7 @@ export default function PostCard(props) {
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div>id: {wm.id}</div>
         <div>status: {wm.status}</div>
-        <div>booked by: {wm.userid}</div>
+        <div>{wm.userid == "none" ? "free" : "booked by: "+wm.userid }</div>
         <div>
           {isBooked ? (
             <img src={avatar} alt="person" style={{ width: "50px" }} />
