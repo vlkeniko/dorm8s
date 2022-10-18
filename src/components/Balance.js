@@ -7,7 +7,7 @@ export default function Balance() {
     <>
       <div className="balance">
         <h3>Your balance:</h3>
-        <h2></h2>
+        
       </div>
     </>
   );

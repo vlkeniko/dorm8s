@@ -6,7 +6,7 @@ import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import WM from "../components/WM";
 import PostCard from "../components/PostCard.js";
-import { endpoint } from '../utils/database_functions.js';
+import { createUser, endpoint } from '../utils/database_functions.js';
 
 export default function HomePage() {
   const [wms, setWms] = useState([]);
@@ -63,16 +63,19 @@ export default function HomePage() {
   return (
     <>
       <article>
-        <h1>Washing overview</h1>
-        <div style={{ display: "flex", flexDirection: "column", width: "70%" }}>
+{/*Sorry for the ugly way of hiding the washing machine display*/}
+        <div style={{ display: "none" }}>
           {wms.map((wm, i) => {
             // Return the element. Also pass key
             return <PostCard key={wm.id} wm={wm} users={users} />;
           })}
         </div>
       </article>
+{/* 
+      <p>You are logged in as {currentuser.username}</p> */}
 
       <div>HomePage</div>
+      <h1> Hello </h1>
       <Balance />
       <Calendar />
       <WM />

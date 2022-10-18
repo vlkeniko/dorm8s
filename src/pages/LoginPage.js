@@ -30,7 +30,7 @@ export default function LoginPage() {
   console.log(users)
 
   useEffect(() => {
-    getUsers();
+    getUsers()
   }, []);
 
   // When the form is submitted, an object is created (formData)...
@@ -54,7 +54,7 @@ export default function LoginPage() {
           formData.password === user.password
         ) {
           console.log("bingo");
-          navigate(`/profile`);
+          navigate(`/`);
         }
       }
     } else {
