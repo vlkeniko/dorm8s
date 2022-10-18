@@ -3,8 +3,8 @@ export default function FinanceButtons() {
 
   return (
     <div>
-<button class="finance-button">Pay kitchen tax</button>
-<button class="finance-button">Add reciept</button>
+<button className="finance-button">Pay kitchen tax</button>
+<button className="finance-button">Add reciept</button>
 
     </div>
   )
