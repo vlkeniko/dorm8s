@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // 📁 pages/HomePage.js
-export default function HomePage() {
+export default function LoginPage() {
   // Defines initial states of data values
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -13,14 +13,21 @@ export default function HomePage() {
   // Fetch is run to get list of users from
   // users.json file in public folder
   const getUsers = () => {
-    fetch("https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Users")
+    fetch("https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Users.json")
       .then(function (response) {
         return response.json();
       })
       .then(function (myJson) {
-        setUsers(myJson);
+        let result = Object.keys(myJson).map((key) => ({
+          id: key,
+          ...myJson[key],
+        }));
+        setUsers(result);
       });
+      
   };
+
+  console.log(users)
 
   useEffect(() => {
     getUsers();
@@ -38,11 +45,12 @@ export default function HomePage() {
     // error message. If everything is good, loop though the
     // list of users to find a match. If match, navigate to wash
     // overview and transfer user information as props.
-    const validForm = formData.username && formData.password;
+    const validForm = formData.name && formData.password;
+    
     if (validForm) {
-      for (const user of users.users) {
+      for (const user of users) {
         if (
-          formData.username === user.username &&
+          formData.name === user.name &&
           formData.password === user.password
         ) {
           console.log("bingo");
