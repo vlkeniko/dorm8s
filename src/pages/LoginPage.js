@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Nav from "../components/Nav";
 
 // 📁 pages/HomePage.js
 export default function LoginPage() {
@@ -101,6 +102,7 @@ export default function LoginPage() {
         </fieldset>
       </form>
       <p>name, password</p>
+      <Nav />
     </>
   
   );
