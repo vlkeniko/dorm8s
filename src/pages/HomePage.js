@@ -81,7 +81,7 @@ export default function HomePage() {
 {/* 
       <p>You are logged in as {currentuser.username}</p> */}
 
-      <div>HomePage</div>
+      <h1 className="header-title">HomePage</h1>
       {/* <h1> Hello {currentuser.username}</h1> */}
       <Balance />
       <Calendar />

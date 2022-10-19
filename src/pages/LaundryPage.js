@@ -4,7 +4,7 @@ import Nav from '../components/Nav'
 export default function LaundryPage() {
   return (
     <>
-    <div>LaundryPage</div>
+    <h1 className="header-title">LaundryPage</h1>
     <Nav/>
     </>
     

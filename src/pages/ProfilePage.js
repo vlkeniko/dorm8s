@@ -3,7 +3,7 @@ import Nav from '../components/Nav'
 export default function ProfilePage() {
   return (
     <>
-    <div>ProfilePage</div>
+    <h1 className="header-title">ProfilePage</h1>
     <Nav/>
     </>
     

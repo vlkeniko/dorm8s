@@ -69,9 +69,9 @@ export default function LoginPage() {
   console.log(username)
   return (
     <>
-  <h1>Log in</h1>
-      <form onSubmit={handleSubmit}>
-        <fieldset style={{ width: "250px" }}>
+  <h1 className="header-title">Log in</h1>
+      <form onSubmit={handleSubmit} >
+        <fieldset style={{ width: "250px" }} className="login-form">
         
           <label>
           <p>Username</p>

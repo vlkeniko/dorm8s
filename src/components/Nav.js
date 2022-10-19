@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <nav>
+    <>
+        <nav>
       <NavLink className="navlink" to="/" >
       Home</NavLink>
       <NavLink className="navlink" to="/kitchen" >
@@ -13,10 +14,13 @@ export default function Nav() {
       Laundry</NavLink>
       <NavLink className="navlink" to="/finances" >
       Finances</NavLink>
-      <NavLink className="navlink" to="/profile" >
-      Profile</NavLink>
       <NavLink className="navlink" to="/login">
       Log in</NavLink>
     </nav>
+
+<NavLink className="navlink navlink-profile" to="/profile" >
+Profile</NavLink>
+    </>
+
   );
 }
