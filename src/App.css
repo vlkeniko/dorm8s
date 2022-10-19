@@ -1,17 +1,16 @@
-
-
-body{
+body {
   padding: 0;
-  margin:0;
-  border:0;
+  margin: 0;
+  border: 0;
   font-family: 'Josefin Sans', sans-serif;
   background-color: var(--white);
 }
+
 /*Colors*/
 :root {
-  --blue-gradient: rgba(1,50,87,1);
+  --blue-gradient: rgba(1, 50, 87, 1);
   --light-blue: #e8fdff;
-  --light-grey:#cccccc;
+  --light-grey: #cccccc;
   --sonic-silver: #767676;
   --eerie-black: #222222;
   --white: #fffffc;
@@ -38,17 +37,17 @@ h2 {
   font-size: 30px;
 }
 
-h3{
+h3 {
   color: var(--dark-gray);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
 }
 
-.header-title{
+.header-title {
   margin-left: 5%;
- }
+}
 
-button{
+button {
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
@@ -56,14 +55,14 @@ button{
   background-color: var(--blue-gradient);
   font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
-border-radius: 10px;
+  border-radius: 10px;
   color: var(--white);
   font-size: 10px;
   border: none;
   margin: 2px;
 }
 
-button:hover{
+button:hover {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 3px;
@@ -79,24 +78,72 @@ button:hover{
   margin: 2px;
 }
 
+@media screen and (min-width: 600px) {
+
+  /*This is designed for only mobile, so we use 400px as a max width*/
+  .navlink-profile {
+   left: 28%;
+  }
+
+  body {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  nav {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-gray);
+    text-decoration: none;
+    font-size: 10px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .all-nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  nav {
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-gray);
+    text-decoration: none;
+    font-size: 10px;
+
+  }
+
+  body {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
 
 /*Navigation*/
- nav{
- 
-  position: fixed;
-  width: 100%;
-  bottom:0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--light-gray);
-  text-decoration: none;
-  font-size: 10px;
-  
- }
 
- .navlink{
+
+.navlink {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--main-color);
@@ -108,40 +155,38 @@ button:hover{
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
- }
+}
 
- .navlink-profile{
+.navlink-profile {
   position: absolute;
   top: 2%;
   right: 5%;
- }
+}
 
- .nav-icon{
+.nav-icon {
   width: 30px;
   height: 30px;
- }
+}
 
 /*Balance*/
- .balance{
+.balance {
   border: 2px solid var(--main-color);
   border-radius: 5px;
   display: flex;
   align-items: center;
-  padding:  10px;
+  padding: 10px;
   justify-content: space-around;
   width: 90%;
- }
+}
 
 /*Finance-buttons*/
 
 
 
- /*LoginPage*/
+/*LoginPage*/
 
- .login-form{
-  width: 80% !important; 
+.login-form {
+  width: 80% !important;
   margin-left: auto;
   margin-right: auto;
- }
-
-
+}

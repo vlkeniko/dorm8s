@@ -9,7 +9,7 @@ import Profile from "../pictures/profile.png";
 
 export default function Nav() {
   return (
-    <>
+    <div className="all-nav">
       <nav>
         <div className="navlink-container">
           <NavLink className="navlink" to="/" >
@@ -52,6 +52,6 @@ export default function Nav() {
           Profile
         </NavLink>
       </div>
-    </>
+    </div>
   );
 }

@@ -10,8 +10,7 @@ import { createUser, endpoint, getUser } from '../utils/database_functions.js';
 
 export default function HomePage() {
 
-  const params = useParams();
-  // const currentuser = JSON.parse(params.users);
+
   const [wms, setWms] = useState([]);
   const [users, setUsers] = useState([]);
   const [items, setItems] = useState([]);
@@ -82,7 +81,7 @@ export default function HomePage() {
       <p>You are logged in as {currentuser.username}</p> */}
 
       <h1 className="header-title">HomePage</h1>
-      {/* <h1> Hello {currentuser.username}</h1> */}
+      {/* <h1> Hello {currentuser.name}</h1> */}
       <Balance />
       <Calendar />
       <WM />

@@ -58,7 +58,8 @@ export default function LoginPage() {
         ) {
           console.log("bingo");
           const currentuser = {
-            username: user.username
+            userid: user.userid,
+            name: user.name
           }
           navigate(`/${JSON.stringify(currentuser)}`);
         } else {
