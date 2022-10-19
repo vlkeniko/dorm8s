@@ -73,16 +73,17 @@ export default function LoginPage() {
         <fieldset style={{ width: "250px" }}>
         
           <label>
-            Username{" "}
-            <input
+          <p>Username</p>
+          <input
               type="text"
               name="username"
               placeholder="Type in username"
               onChange={(e) => setUsername(e.target.value)}
             ></input>
           </label>
+            
           <label>
-            Password&nbsp;{" "}
+          <p>Password</p>
             <input
               type="password"
               name="password"
