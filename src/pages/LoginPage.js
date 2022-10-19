@@ -8,6 +8,7 @@ export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
@@ -60,6 +61,8 @@ export default function LoginPage() {
             username: user.username
           }
           navigate(`/${JSON.stringify(currentuser)}`);
+        } else {
+          setErrorMessage("Incorrect password or username");
         }
       }
     } else {
