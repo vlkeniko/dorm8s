@@ -103,12 +103,22 @@ button:hover{
   padding: 10px;
   text-decoration: none;
   font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
  }
 
  .navlink-profile{
   position: absolute;
   top: 2%;
   right: 5%;
+ }
+
+ .nav-icon{
+  width: 30px;
+  height: 30px;
  }
 
 /*Balance*/
@@ -133,3 +143,5 @@ button:hover{
   margin-left: auto;
   margin-right: auto;
  }
+
+
