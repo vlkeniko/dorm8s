@@ -1,18 +1,23 @@
 import React from "react";
 import { useEffect, useState } from "react";
-
 import Balance from "../components/Balance";
 import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import WM from "../components/WM";
 import PostCard from "../components/PostCard.js";
-import { createUser, endpoint } from '../utils/database_functions.js';
+import { useParams } from "react-router-dom";
+import { createUser, endpoint, getUser } from '../utils/database_functions.js';
 
 export default function HomePage() {
+
+  const params = useParams();
+  // const currentuser = JSON.parse(params.users);
   const [wms, setWms] = useState([]);
   const [users, setUsers] = useState([]);
   const [items, setItems] = useState([]);
   const [leases, setLeases] = useState([]);
+
+
 
   /* Getting data from an endpoint */
   async function getFromEndpoint(url) {
@@ -24,7 +29,7 @@ export default function HomePage() {
     }));
     return result;
   }
-
+  
   /* Getting washing machine data */
   async function getWms() {
     const url = `${endpoint}/WashingMachines.json`;
@@ -53,11 +58,13 @@ export default function HomePage() {
     setLeases(result);
   }
 
+
   useEffect(() => {
     getWms();
     getUsers();
     getItems();
     getLeases();
+   
   }, []);
 
   return (
@@ -75,7 +82,7 @@ export default function HomePage() {
       <p>You are logged in as {currentuser.username}</p> */}
 
       <div>HomePage</div>
-      <h1> Hello </h1>
+      {/* <h1> Hello {currentuser.username}</h1> */}
       <Balance />
       <Calendar />
       <WM />

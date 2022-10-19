@@ -52,21 +52,26 @@ export default function LoginPage() {
         if (
           formData.name === user.name &&
           formData.password === user.password
+      
         ) {
           console.log("bingo");
-          navigate(`/`);
+          const currentuser = {
+            username: user.username
+          }
+          navigate(`/${JSON.stringify(currentuser)}`);
         }
       }
     } else {
       setErrorMessage("Please, fill in all fields.");
     }
   }
-
+  console.log(username)
   return (
     <>
+  <h1>Log in</h1>
       <form onSubmit={handleSubmit}>
         <fieldset style={{ width: "250px" }}>
-          <legend>Log in</legend>
+        
           <label>
             Username{" "}
             <input
@@ -95,7 +100,8 @@ export default function LoginPage() {
         </fieldset>
       </form>
       <p>name, password</p>
-
     </>
+  
   );
+  
 }

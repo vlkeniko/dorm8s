@@ -5,10 +5,12 @@ body{
 }
 /*Colors*/
 :root {
-  --main-color:rgb(0, 0, 0);
-  --dark-gray: rgb(74, 74, 74);
-  --light-gray:#bababa;
-  --white: white;
+  --blue-gradient:linear-gradient(105deg, rgba(1,50,87,1) 70%, rgba(59,81,149,1) 100%);
+  --light-blue: #e8fdff;
+  --light-grey:#cccccc;
+  --sonic-silver: #767676;
+  --eerie-black: #222222;
+  --white: #fffffc;
 }
 
 /*fonts*/
