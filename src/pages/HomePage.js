@@ -5,17 +5,13 @@ import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import WM from "../components/WM";
 import PostCard from "../components/PostCard.js";
-import { useParams } from "react-router-dom";
 import { createUser, endpoint, getUser } from '../utils/database_functions.js';
-
 export default function HomePage() {
-
 
   const [wms, setWms] = useState([]);
   const [users, setUsers] = useState([]);
   const [items, setItems] = useState([]);
   const [leases, setLeases] = useState([]);
-
 
 
   /* Getting data from an endpoint */
@@ -81,7 +77,7 @@ export default function HomePage() {
       <p>You are logged in as {currentuser.username}</p> */}
 
       <h1 className="header-title">HomePage</h1>
-      {/* <h1> Hello {currentuser.name}</h1> */}
+      <h1> Hello </h1>
       <Balance />
       <Calendar />
       <WM />

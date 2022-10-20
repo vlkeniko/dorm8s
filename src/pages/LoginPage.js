@@ -39,27 +39,29 @@ export default function LoginPage() {
   async function handleSubmit(e) {
     e.preventDefault();
     const formData = {
-      name: username,
+      username: username,
       password: password,
     };
+
+  
 
     // Check to see if all fields were filled. If not, show an
     // error message. If everything is good, loop though the
     // list of users to find a match. If match, navigate to wash
     // overview and transfer user information as props.
-    const validForm = formData.name && formData.password;
+    const validForm = formData.username && formData.password;
     
     if (validForm) {
       for (const user of users) {
         if (
-          formData.name === user.name &&
+          formData.username === user.username &&
           formData.password === user.password
       
         ) {
           console.log("bingo");
           const currentuser = {
-            userid: user.userid,
-            name: user.name
+            id: user.id,
+            username: user.username
           }
           navigate(`/${JSON.stringify(currentuser)}`);
         } else {
@@ -70,9 +72,9 @@ export default function LoginPage() {
       setErrorMessage("Please, fill in all fields.");
     }
   }
-  console.log(username)
   return (
     <>
+    
   <h1 className="header-title">Log in</h1>
       <form onSubmit={handleSubmit} >
         <fieldset style={{ width: "250px" }} className="login-form">
@@ -110,5 +112,6 @@ export default function LoginPage() {
     </>
   
   );
-  
+ 
 }
+
