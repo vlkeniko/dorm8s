@@ -5,25 +5,17 @@ import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import AvailableMachines from "../components/AvailableMachines";
 import PostCard from "../components/PostCard.js";
-import { createUser, endpoint, getUser } from '../utils/database_functions.js';
+import { createUser, endpoint, getUser, getFromEndpoint } from '../utils/database_functions.js';
 export default function HomePage() {
 
   const [wms, setWms] = useState([]);
   const [users, setUsers] = useState([]);
-  const [items, setItems] = useState([]);
+  /* const [items, setItems] = useState([]); */
   const [leases, setLeases] = useState([]);
 
 
   /* Getting data from an endpoint */
-  async function getFromEndpoint(url) {
-    const response = await fetch(url);
-    const data = await response.json();
-    let result = Object.keys(data).map((key) => ({
-      id: key,
-      ...data[key],
-    }));
-    return result;
-  }
+  
   
   /* Getting washing machine data */
   async function getWms() {
@@ -40,11 +32,11 @@ export default function HomePage() {
   }
 
   /* Getting items data */
-  async function getItems() {
+ /*  async function getItems() {
     const url = `${endpoint}/Items.json`;
     let result = await getFromEndpoint(url);
     setItems(result);
-  }
+  } */
 
   /* Getting leases data */
   async function getLeases() {
@@ -57,7 +49,7 @@ export default function HomePage() {
   useEffect(() => {
     getWms();
     getUsers();
-    getItems();
+    //getItems();
     getLeases();
    
   }, []);

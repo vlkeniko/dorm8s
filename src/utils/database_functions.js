@@ -1,5 +1,15 @@
 export let endpoint = "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app";
 
+export async function getFromEndpoint(url) {
+  const response = await fetch(url);
+  const data = await response.json();
+  let result = Object.keys(data).map((key) => ({
+    id: key,
+    ...data[key],
+  }));
+  return result;
+}
+
 /* MANAGING USERS */
 /* Get one user's data */
 export async function getUser(id) {
