@@ -13,6 +13,8 @@ body {
   --main-blue: #5a6eab;
   --light-blue: #e8fdff;
   --coral: #e48b94;
+  --available: #219284;
+  --unavailable: #E48B94;
 }
 
 /*fonts*/
@@ -226,4 +228,13 @@ margin-right: auto;
   align-items: center;
   text-align: center;
   box-shadow: 4px 4px 3px rgb(199, 199, 199);
+}
+
+.machine {
+  display: flex;
+}
+
+.machine .icon {
+  /* background-color: var(--unavailable); */
+  background-color: var(--available);
 }
