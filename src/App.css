@@ -14,6 +14,8 @@ body {
   --sonic-silver: #767676;
   --eerie-black: #222222;
   --white: #fffffc;
+  --available: #219284;
+  --unavailable: #E48B94;
 }
 
 /*fonts*/
@@ -232,4 +234,9 @@ margin-right: auto;
 
 .machine {
   display: flex;
+}
+
+.machine .icon {
+  /* background-color: var(--unavailable); */
+  background-color: var(--available);
 }
