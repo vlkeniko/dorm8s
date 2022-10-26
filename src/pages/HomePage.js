@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Balance from "../components/Balance";
 import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
-import WM from "../components/WM";
+import AvailableMachines from "../components/AvailableMachines";
 import PostCard from "../components/PostCard.js";
 import { createUser, endpoint, getUser } from '../utils/database_functions.js';
 export default function HomePage() {
@@ -80,7 +80,7 @@ export default function HomePage() {
       <h1> Hello </h1>
       <Balance />
       <Calendar />
-      <WM />
+      <AvailableMachines />
       <Nav />
     </>
   );
