@@ -4,9 +4,10 @@ export default function FinanceButtons() {
   return (
     <div>
       <button className="finance-button">Pay kitchen tax</button>
-      <button className="finance-button" id="btn">Add reciept</button>
-      <input type="file" accept="image/*" capture="camera" for="btn" />
-
+      
+      {/* Hiding the file input under the "Add receipt" button */}
+      <input type="file" accept="image/*" id="fileUpload" capture="camera" style={{display: "none"}} />
+      <button className="finance-button" id="btn" value="Add receipt" onClick={() => document.getElementById('fileUpload').click()} >Add receipt</button>
     </div>
   )
 }
