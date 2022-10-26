@@ -229,3 +229,7 @@ margin-right: auto;
   text-align: center;
   box-shadow: 4px 4px 3px rgb(199, 199, 199);
 }
+
+.machine {
+  display: flex;
+}
