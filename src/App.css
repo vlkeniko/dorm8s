@@ -4,8 +4,8 @@ body {
   border: 0;
   font-family: 'Josefin Sans', sans-serif;
   background-image: url("./pictures/bg.png");
-  background-repeat:no-repeat;
-  background-size:cover ;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*Colors*/
@@ -172,8 +172,8 @@ body {
   background-size: contain;
 }
 
- .home:hover,
- .navlink.active{
+.home:hover,
+.navlink.active {
   background-image: url("./pictures/home-active.png");
 }
 
@@ -190,8 +190,7 @@ body {
 
 
 .kitchen:hover,
-.kitchen.active
- {
+.kitchen.active {
   background-image: url("./pictures/clipboard-active.png");
 }
 
@@ -211,62 +210,87 @@ body {
 
 /*Balance*/
 .balance {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
   margin-left: 5%;
   display: flex;
-  align-items: left;
+  align-items: flex-start;
   padding: 10px;
   justify-content: space-around;
-  width: 90%;
+  padding: 10px;
+  border: 1px #5A6EAB solid;
+  border-radius: 30px;
+
 }
+
 /*Transactions*/
 
-.transactions{
-margin-left: 5%;
-margin-right: 5%;
-margin-top: 20px;
-margin-bottom: 20px;
-padding: 10px;
-border:1px #5A6EAB solid;
-border-radius: 30px;
-background-color: #F6FEFD;
+.transactions {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px #5A6EAB solid;
+  border-radius: 30px;
+  background-color: #F6FEFD;
+}
+
+.transaction-title {
+  text-align: left;
+}
+
+.transaction-date {
+  text-align: left;
+  margin-bottom: -30px;
+}
+
+.transaction-amount {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #5A6EAB;
 }
 
 /*Finance-buttons*/
 
-.finance-buttons{
+.finance-buttons {
   display: flex;
   margin-left: 5%;
-margin-right: 5%;
-margin-top: 5px;
-margin-bottom: 5px;
-justify-content: center;
+  margin-right: 5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
 }
 
-.finance-button{
-  color:#5A6EAB;
+.finance-button {
+  color: #5A6EAB;
   font-size: 16px;
   background-color: var(--white);
   padding-top: 20px;
   width: 150px;
   padding-bottom: 20px;
   border-radius: 20px;
-  -webkit-box-shadow: 3px 7px 3px -3px #5A6EAB; 
-box-shadow: 3px 7px 3px -3px #5A6EAB;
-background-color: #F6FEFD;
+  -webkit-box-shadow: 3px 7px 3px -3px #5A6EAB;
+  box-shadow: 3px 7px 3px -3px #5A6EAB;
+  background-color: #F6FEFD;
 
 }
 
-.finance-button:hover{
-  color:#5A6EAB;
+.finance-button:hover {
+  color: #5A6EAB;
   background-color: var(--white);
+  font-size: 16px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 20px;
   border: none;
-  -webkit-box-shadow: 5px 9px 3px -3px #5A6EAB; 
-box-shadow: 5px 9px 6px -6px #5A6EAB;
-background-color: #F6FEFD;
+  -webkit-box-shadow: 5px 9px 3px -3px #5A6EAB;
+  box-shadow: 5px 9px 6px -6px #5A6EAB;
+  background-color: #F6FEFD;
 
 }
 
