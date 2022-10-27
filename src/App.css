@@ -95,7 +95,6 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   font-family: 'Josefin Sans', sans-serif;
-  background-color: var(--white);
   text-decoration: none;
   font-size: 10px;
 }
@@ -135,7 +134,7 @@ body {
 .navlink {
   text-transform: uppercase;
   font-weight: bold;
-  padding: 10px;
+  padding: 12px;
   text-decoration: none;
   font-size: 10px;
   display: flex;
@@ -173,19 +172,29 @@ body {
   background-size: contain;
 }
 
-.home:active {
+ .home:hover,
+ .home:active,
+ .home:focus{
   background-image: url("./pictures/home-active.png");
 }
 
-.laundry:active {
+
+.laundry:hover,
+.laundry:active,
+.laundry:focus {
   background-image: url("./pictures/laundry-active.png");
 }
 
-.finances:active {
+.finances:hover,
+.finances:active, 
+.finances:focus {
   background-image: url("./pictures/piggy-active.png");
 }
 
-.kitchen:active {
+
+.kitchen:hover,
+.kitchen:active,
+.kitchen:focus {
   background-image: url("./pictures/clipboard-active.png");
 }
 
