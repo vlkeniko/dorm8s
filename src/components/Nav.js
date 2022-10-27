@@ -12,32 +12,27 @@ export default function Nav() {
     <div className="all-nav">
       <nav>
         <div className="navlink-container">
-          <NavLink className="navlink" to="/" >
-            <img src={Home} alt="homeicon" className="nav-icon"/>
+          <NavLink className="navlink home" activeClassName="navlink home-active" to="/" >
           </NavLink>
         </div>
 
         <div className="navlink-container">
-          <NavLink className="navlink" to="/kitchen">
-            <img src={Kitchen} alt="homeicon" className="nav-icon"/>
+          <NavLink className="navlink kitchen" activeClassName="navlink kitchen-active" to="/kitchen">
           </NavLink>
         </div>
 
         <div className="navlink-container">
-          <NavLink className="navlink" to="/laundry">
-            <img src={Laundry} alt="homeicon" className="nav-icon"/>
+          <NavLink className="navlink laundry" activeClassName="navlink kitchen-active" to="/laundry">
           </NavLink>
         </div>
 
         <div className="navlink-container">
-          <NavLink className="navlink" to="/finances">
-            <img src={Finances} alt="homeicon" className="nav-icon"/>
+          <NavLink className="navlink finances" activeClassName="navlink finances-active" to="/finances">
           </NavLink>
         </div>
 
         <div className="navlink-container">
           <NavLink className="navlink" to="/login">
-            <img src={Home} alt="homeicon" className="nav-icon"/>
           </NavLink>
         </div>
       </nav>
