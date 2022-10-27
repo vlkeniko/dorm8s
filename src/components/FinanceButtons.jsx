@@ -126,7 +126,7 @@ export default function FinanceButtons() {
             </div>
           )}
 
-          <button id="btn" value="Add receipt" onClick={handlePublish}>
+          <button className="reciept-button" id="btn" value="Add receipt" onClick={handlePublish}>
             Add receipt
           </button>
         </div>

@@ -381,19 +381,23 @@ body {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #e8fdff;
   margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  padding: 10px;
+  border: 2px solid #5A6EAB;
+  border-radius: 30px;
+  width: 90%;
+  height: 30%;
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: var(--coral);
   float: right;
-  font-size: 28px;
+  top: 20px;
+  font-size: 50px;
   font-weight: bold;
+  margin-top: -15px;
 }
 
 .close:hover,
@@ -401,4 +405,33 @@ body {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+#fileUpload{
+  width: 90%;
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  background-color: var(--white);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  color: var(--main-blue);
+  font-size: 16px;
+  border: 2px solid #5A6EAB;
+  border-radius: 30px;
+}
+
+.reciept-button{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 30px;
+  width: 150px;
+  height: 70px;
+  font-size: 20px;
+  float: right;
+  margin-bottom: 20px;
 }
