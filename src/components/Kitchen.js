@@ -30,23 +30,7 @@ export default function Kitchen() {
           /* return <PostCard key={wm.id} wm={wm} users={users} />; */
         })}
 
-        {/* <div className="to-buy-card">
-          <img src={Finances} alt="onion" />
-          <p>Onion</p>
-          <p>!!!</p>
-        </div>
-
-        <div className="to-buy-card">
-          <img src={Finances} alt="onion" />
-          <p>Onion</p>
-          <p>!!!</p>
-        </div>
-
-        <div className="to-buy-card">
-          <img src={Finances} alt="onion" />
-          <p>Onion</p>
-          <p>!!!</p>
-        </div> */}
+        
       </div>
       <h2>In house</h2>
       <h3>Groceries</h3>
