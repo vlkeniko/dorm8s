@@ -12,7 +12,7 @@ export default function Nav() {
     <div className="all-nav">
       <nav>
         <div className="navlink-container">
-          <NavLink className="navlink home" to="/" >
+          <NavLink className="navlink home" end to="/" >
           </NavLink>
         </div>
 
