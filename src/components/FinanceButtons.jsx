@@ -2,16 +2,19 @@ import { addDoc, collection, Timestamp } from "firebase/firestore";
 import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { db, storage } from "../firebaseConfig";
+import { useEffect} from 'react';
 
 export default function FinanceButtons() {
-// Get the modal
-var modal = document.getElementById("myModal");
+
+  useEffect(() => {
+    // Get the modal
+const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+const btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -29,9 +32,10 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+  }, []);
 
 
-
+  
   const [formData, setFormData] = useState({
     image: "",
     createdAt: Timestamp.now().toDate(),
@@ -95,15 +99,15 @@ window.onclick = function(event) {
   };
   return (
     <div>
-      <button className="finance-button">Pay kitchen tax</button>
+      <a href="https://products.mobilepay.dk/box/invitation?id=2fN8cgSk&fbclid=IwAR22tSZaxhAWlDgbObzgwhKvU8TWUz0zqUpKliVvDQ9uvdFW8Qe9e8sstwQ"><button className="finance-button" >Pay kitchen tax</button></a>
       {/*Clicking this button will open the modal*/}
       <button className="finance-button" id="myBtn">
         Add reciept
       </button>
 
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
+      <div id="myModal" className="modal">
+        <div className="modal-content">
+          <span className="close">&times;</span>
           {/* Hiding the file input under the "Add receipt" button */}
           <input
             type="file"
@@ -112,6 +116,7 @@ window.onclick = function(event) {
             id="fileUpload"
             capture="camera"
             onChange={(e) => handleImageChange(e)}
+        
           />
 
           {progress === 0 ? null : (
