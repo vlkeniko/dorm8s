@@ -4,6 +4,34 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { db, storage } from "../firebaseConfig";
 
 export default function FinanceButtons() {
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
   const [formData, setFormData] = useState({
     image: "",
     createdAt: Timestamp.now().toDate(),
@@ -15,87 +43,98 @@ export default function FinanceButtons() {
     setFormData({ ...formData, image: e.target.files[0] });
   };
 
+
+  
   const handlePublish = (e) => {
     if (!formData.image) {
       alert("Please choose an image");
       return;
     }
-//Uploading it to storage, in the images folder. The name of the file will be the current date
+
+
+    //Uploading it to storage, in the images folder. The name of the file will be the current date
     const storageRef = ref(storage, `/images/${Date.now()}`);
 
+    const uploadImage = uploadBytesResumable(storageRef, formData.image);
 
-  const uploadImage = uploadBytesResumable(storageRef, formData.image);
+    uploadImage.on(
+      "state_changed",
+      (snapshot) => {
+        const progressPrecent = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setProgress(progressPrecent);
+      },
+      (err) => {
+        console.log(err);
+      },
 
-  uploadImage.on(
-    "state_changed",
-    (snapshot) => {
-      const progressPrecent = Math.round(
-        (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-      );
-      setProgress(progressPrecent);
-    },
-    (err) => {
-      console.log(err);
-    },
+      () => {
+        setFormData({
+          title: "",
+          description: "",
+          image: "",
+        });
 
-    () => {
-      setFormData({
-        title: "",
-        description: "",
-        image: "",
-      });
-
-      getDownloadURL(uploadImage.snapshot.ref).then((url) => {
-        const recieptRef = collection(db, "Reciepts");
-        addDoc(recieptRef, {
-          image: url,
-          createdAt: Timestamp.now().toDate(),
-        })
-          .then(() => {
-            alert("Reciept uploaded");
-            setProgress(0);
+        getDownloadURL(uploadImage.snapshot.ref).then((url) => {
+          const recieptRef = collection(db, "Reciepts");
+          addDoc(recieptRef, {
+            image: url,
+            createdAt: Timestamp.now().toDate(),
           })
-          .catch((err) => {
-            alert("Error occured");
-          });
-      });
-    }
-  );
-
-};
+            .then(() => {
+              alert("Reciept uploaded");
+              setProgress(0);
+            })
+            .catch((err) => {
+              alert("Error occured");
+            });
+        });
+      }
+    );
+  };
   return (
     <div>
       <button className="finance-button">Pay kitchen tax</button>
+      {/*Clicking this button will open the modal*/}
+      <button className="finance-button" id="myBtn">
+        Add reciept
+      </button>
 
-      {/* Hiding the file input under the "Add receipt" button */}
-      <input
-        type="file"
-        name="image"
-        accept="image/*"
-        id="fileUpload"
-        capture="camera"
-        onChange={(e) => handleImageChange(e)}
-      />
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          {/* Hiding the file input under the "Add receipt" button */}
+          <input
+            type="file"
+            name="image"
+            accept="image/*"
+            id="fileUpload"
+            capture="camera"
+            onChange={(e) => handleImageChange(e)}
+          />
 
-{progress === 0? null :(
-      <div className="progress">
-        <div
+          {progress === 0 ? null : (
+            <div className="progress">
+              <div
                 className="progress-bar progress-bar-striped mt-2"
                 style={{ width: `${progress}%` }}
               >
                 {`uploading image ${progress}%`}
               </div>
-    </div>
-)}
+            </div>
+          )}
 
-      <button
-        className="finance-button"
-        id="btn"
-        value="Add receipt"
-        onClick={handlePublish}
-      >
-        Add receipt
-      </button>
+          <button
+            className="finance-button"
+            id="btn"
+            value="Add receipt"
+            onClick={handlePublish}
+          >
+            Add receipt
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
