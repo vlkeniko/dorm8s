@@ -12,22 +12,22 @@ export default function Nav() {
     <div className="all-nav">
       <nav>
         <div className="navlink-container">
-          <NavLink className="navlink home" activeClassName="navlink home-active" to="/" >
+          <NavLink className="navlink home" to="/" >
           </NavLink>
         </div>
 
         <div className="navlink-container">
-          <NavLink className="navlink kitchen" activeClassName="navlink kitchen-active" to="/kitchen">
+          <NavLink className="navlink kitchen" to="/kitchen">
           </NavLink>
         </div>
 
         <div className="navlink-container">
-          <NavLink className="navlink laundry" activeClassName="navlink kitchen-active" to="/laundry">
+          <NavLink className="navlink laundry" to="/laundry">
           </NavLink>
         </div>
 
         <div className="navlink-container">
-          <NavLink className="navlink finances" activeClassName="navlink finances-active" to="/finances">
+          <NavLink className="navlink finances" to="/finances">
           </NavLink>
         </div>
 

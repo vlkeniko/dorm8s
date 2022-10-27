@@ -28,13 +28,13 @@ p {
 
 h1 {
   color: var(--main-blue);
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 40px;
 }
 
 h2 {
   color: var(--main-blue);
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 30px;
 }
 
@@ -173,32 +173,20 @@ body {
   background-size: contain;
 }
 
-.home-active {
+.home:active {
   background-image: url("./pictures/home-active.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
-.laundry-active {
+.laundry:active {
   background-image: url("./pictures/laundry-active.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
-.finances-active {
+.finances:active {
   background-image: url("./pictures/piggy-active.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
-.kitchen-active {
+.kitchen:active {
   background-image: url("./pictures/clipboard-active.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .navlink-profile {
