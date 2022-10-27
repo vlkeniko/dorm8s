@@ -134,8 +134,6 @@ body {
 
 
 .navlink {
-  text-transform: uppercase;
-  font-weight: bold;
   padding: 12px;
   text-decoration: none;
   font-size: 10px;
@@ -175,28 +173,25 @@ body {
 }
 
  .home:hover,
- .home:active,
- .home:focus{
+ .navlink.active{
   background-image: url("./pictures/home-active.png");
 }
 
 
 .laundry:hover,
-.laundry:active,
-.laundry:focus {
+.laundry.active {
   background-image: url("./pictures/laundry-active.png");
 }
 
 .finances:hover,
-.finances:active, 
-.finances:focus {
+.finances.active {
   background-image: url("./pictures/piggy-active.png");
 }
 
 
 .kitchen:hover,
-.kitchen:active,
-.kitchen:focus {
+.kitchen.active
+ {
   background-image: url("./pictures/clipboard-active.png");
 }
 

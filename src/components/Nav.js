@@ -1,10 +1,6 @@
 // This documment shows the menuitems(links) in the app's main navigation menu
 // Implemented by app.js.
 import { NavLink } from "react-router-dom";
-import Home from "../pictures/home.png";
-import Kitchen from "../pictures/cutlery.png";
-import Laundry from "../pictures/laundry.png";
-import Finances from "../pictures/finances.png";
 import Profile from "../pictures/profile.png";
 
 export default function Nav() {
@@ -12,7 +8,7 @@ export default function Nav() {
     <div className="all-nav">
       <nav>
         <div className="navlink-container">
-          <NavLink className="navlink home" to="/" >
+          <NavLink className="navlink home" end to="/" >
           </NavLink>
         </div>
 
