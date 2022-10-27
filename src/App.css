@@ -3,7 +3,9 @@ body {
   margin: 0;
   border: 0;
   font-family: 'Josefin Sans', sans-serif;
-  background-color: var(--white);
+  background-image: url("./pictures/bg.png");
+  background-repeat:no-repeat;
+  background-size:cover ;
 }
 
 /*Colors*/
