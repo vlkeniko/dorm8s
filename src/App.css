@@ -224,7 +224,29 @@ body {
 
 /*Finance-buttons*/
 
+.finance-button{
+  color:#5A6EAB;
+  background-color: var(--white);
+  padding-top: 20px;
+  width: 100px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 7px 3px -3px #5A6EAB; 
+box-shadow: 3px 7px 3px -3px #5A6EAB;
 
+}
+
+.finance-button:hover{
+  color:#5A6EAB;
+  background-color: var(--white);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  border: none;
+  -webkit-box-shadow: 5px 9px 3px -3px #5A6EAB; 
+box-shadow: 5px 9px 6px -6px #5A6EAB;
+
+}
 
 /*LoginPage*/
 
@@ -263,11 +285,6 @@ body {
   box-shadow: 4px 4px 3px rgb(199, 199, 199);
 }
 
-
-
-
-
-/*jajjjjj*/
 
 .in-house-card {
   height: 70px;

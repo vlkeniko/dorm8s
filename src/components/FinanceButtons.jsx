@@ -131,7 +131,7 @@ window.onclick = function(event) {
           )}
 
           <button
-            className="finance-button"
+    
             id="btn"
             value="Add receipt"
             onClick={handlePublish}
