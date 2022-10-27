@@ -2,7 +2,7 @@ import { addDoc, collection, Timestamp } from "firebase/firestore";
 import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { db, storage } from "../firebaseConfig";
-import {useRef, useEffect} from 'react';
+import { useEffect} from 'react';
 
 export default function FinanceButtons() {
 
@@ -99,9 +99,9 @@ window.onclick = function(event) {
   };
   return (
     <div>
-      <button className="finance-button">Pay kitchen tax</button>
+      <a href="https://products.mobilepay.dk/box/invitation?id=2fN8cgSk&fbclid=IwAR22tSZaxhAWlDgbObzgwhKvU8TWUz0zqUpKliVvDQ9uvdFW8Qe9e8sstwQ"><button className="finance-button" >Pay kitchen tax</button></a>
       {/*Clicking this button will open the modal*/}
-      <button className="finance-button" id="myBtn" ref={ref}>
+      <button className="finance-button" id="myBtn">
         Add reciept
       </button>
 
@@ -116,7 +116,7 @@ window.onclick = function(event) {
             id="fileUpload"
             capture="camera"
             onChange={(e) => handleImageChange(e)}
-            ref={ref}
+        
           />
 
           {progress === 0 ? null : (
@@ -135,7 +135,6 @@ window.onclick = function(event) {
             id="btn"
             value="Add receipt"
             onClick={handlePublish}
-            ref={ref}
           >
             Add receipt
           </button>
