@@ -435,3 +435,82 @@ body {
   float: right;
   margin-bottom: 20px;
 }
+
+
+/* ---    CALENDAR - Home page    ---*/
+.calendar-wrapper {
+  font-family: 'Josefin Sans';
+  margin: 0 auto;
+  width: 50%;
+}
+
+.calendar-flex {
+  display: flex;
+  flex-wrap: wrap;
+/*   margin: 0 -10px; */
+}
+
+.calendar-flex li {
+  text-align: center;
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.calendar-cards {
+  list-style: none;
+  margin: 0;
+  height: 250px;
+/*   padding: 0; */
+}
+
+.calendar-cards li {
+/*   border: 2px solid #490A3D; */
+  border-radius:13px;
+  background-color: #5A6EAB;
+  color: #fff;
+/*   flex: 1 1 200px; */
+  max-width: 150px;
+  text-align: center;
+/*   display: flex; */
+/*   flex-wrap: wrap; */
+}
+
+.date-nr {
+  display: flex;
+/*   align-items: center; */
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nr {
+/*   background-color: #490A3D; */
+  color: white;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+/*   padding: 10px; */
+/*   padding-right: 0; */
+  font-size: 85px;
+  font-weight: bold;
+/*   display: flex; */
+}
+
+.vertical-date {
+/*   background-color: green; */
+  transform: rotate(90deg);
+  font-size: 25px;
+  font-weight: semibold;
+  height: 20%;
+  margin-top: 40px;
+  margin-left: -20px;
+}
+
+.calendar-cards p {
+  color: white;
+  font-size: 24px;
+  font-weight: medium;
+  line-height: 29px;
+  padding-bottom: 50px;
+  margin-top: 0;
+}
