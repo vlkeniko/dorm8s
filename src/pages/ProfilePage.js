@@ -10,6 +10,7 @@ export default function ProfilePage() {
 
     {/* <Profile/> */}
     <Nav/>
+    <ProfilePage/>
     </>
   )
 }
