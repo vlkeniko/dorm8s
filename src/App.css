@@ -215,7 +215,29 @@ body {
 
 /*Finance-buttons*/
 
+.finance-button{
+  color:#5A6EAB;
+  background-color: var(--white);
+  padding-top: 20px;
+  width: 100px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 7px 3px -3px #5A6EAB; 
+box-shadow: 3px 7px 3px -3px #5A6EAB;
 
+}
+
+.finance-button:hover{
+  color:#5A6EAB;
+  background-color: var(--white);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  border: none;
+  -webkit-box-shadow: 5px 9px 3px -3px #5A6EAB; 
+box-shadow: 5px 9px 6px -6px #5A6EAB;
+
+}
 
 /*LoginPage*/
 
