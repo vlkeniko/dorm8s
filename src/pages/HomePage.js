@@ -39,6 +39,8 @@ export default function HomePage() {
     getLeases();
   }, []);
 
+  let balance = JSON.parse(localStorage.getItem("loggedinbalance"));
+
   return (
     <>
       <article>
@@ -59,7 +61,7 @@ export default function HomePage() {
           ? `Hello ${JSON.parse(localStorage.getItem("loggedinname"))}`
           : ""}
       </h1>
-      <Balance />
+      <Balance balance={balance} />
       <Calendar />
       <AvailableMachines />
       <Nav />
