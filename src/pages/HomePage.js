@@ -68,7 +68,8 @@ export default function HomePage() {
 {/* 
       <p>You are logged in as {currentuser.username}</p> */}
 
-      <h1 className="header-title">Hello, (name)!</h1>
+      <h1 className="header-title">HomePage</h1>
+      <h1> {JSON.parse(localStorage.getItem('loggedinname')) ? `Hello ${JSON.parse(localStorage.getItem('loggedinname'))}` : ""} </h1>
       <Balance />
       <Calendar />
       <AvailableMachines />

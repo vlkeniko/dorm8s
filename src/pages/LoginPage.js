@@ -8,14 +8,16 @@ export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  
+
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
   // Fetch is run to get list of users from
   // users.json file in public folder
   const getUsers = () => {
-    fetch("https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Users.json")
+    fetch(
+      "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Users.json"
+    )
       .then(function (response) {
         return response.json();
       })
@@ -26,13 +28,12 @@ export default function LoginPage() {
         }));
         setUsers(result);
       });
-      
   };
 
-  console.log(users)
+  console.log(users);
 
   useEffect(() => {
-    getUsers()
+    getUsers();
   }, []);
 
   // When the form is submitted, an object is created (formData)...
@@ -43,26 +44,26 @@ export default function LoginPage() {
       password: password,
     };
 
-  
-
     // Check to see if all fields were filled. If not, show an
     // error message. If everything is good, loop though the
     // list of users to find a match. If match, navigate to wash
     // overview and transfer user information as props.
     const validForm = formData.username && formData.password;
-    
+
     if (validForm) {
       for (const user of users) {
         if (
           formData.username === user.username &&
           formData.password === user.password
-      
         ) {
           console.log("bingo");
           const currentuser = {
             id: user.id,
-            username: user.username
-          }
+            username: user.username,
+          };
+
+          localStorage.setItem("loggedinid", JSON.stringify(user.id));
+          localStorage.setItem("loggedinname", JSON.stringify(user.username));
           navigate(`/${JSON.stringify(currentuser)}`);
         } else {
           setErrorMessage("Incorrect password or username");
@@ -72,46 +73,53 @@ export default function LoginPage() {
       setErrorMessage("Please, fill in all fields.");
     }
   }
-  return (
-    <>
-    
-  <h1 className="header-title">Log in</h1>
-      <form onSubmit={handleSubmit} >
-        <fieldset style={{ width: "250px" }} className="login-form">
-        
-          <label>
-          <p>Username</p>
-          <input
-              type="text"
-              name="username"
-              placeholder="Type in username"
-              onChange={(e) => setUsername(e.target.value)}
-            ></input>
-          </label>
-            
-          <label>
-          <p>Password</p>
-            <input
-              type="password"
-              name="password"
-              placeholder="Type in password"
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
-            <br></br>
-            <br></br>
-            <p>{errorMessage}</p>
-            <button style={{ float: "right" }}>Login</button>
-            <button type="reset" style={{ float: "right" }}>
-              Reset
-            </button>
-          </label>
-        </fieldset>
-      </form>
-      <p>name, password</p>
-      <Nav />
-    </>
-  
-  );
- 
-}
 
+  if (JSON.parse(localStorage.getItem("loggedinname")) === null) {
+    return (
+      <>
+        <h1 className="header-title">Log in</h1>
+        <form onSubmit={handleSubmit}>
+          <fieldset style={{ width: "250px" }} className="login-form">
+            <label>
+              <p>Username</p>
+              <input
+                type="text"
+                name="username"
+                placeholder="Type in username"
+                onChange={(e) => setUsername(e.target.value)}
+              ></input>
+            </label>
+
+            <label>
+              <p>Password</p>
+              <input
+                type="password"
+                name="password"
+                placeholder="Type in password"
+                onChange={(e) => setPassword(e.target.value)}
+              ></input>
+              <br></br>
+              <br></br>
+              <p>{errorMessage}</p>
+              <button style={{ float: "right" }}>Login</button>
+              <button type="reset" style={{ float: "right" }}>
+                Reset
+              </button>
+            </label>
+          </fieldset>
+        </form>
+
+        <p>name, password</p>
+        <Nav />
+      </>
+    );
+  }
+  else {
+    return (
+      <>
+        <h2>You are logged in.</h2>
+        <Nav />
+      </>
+    );
+  }
+}
