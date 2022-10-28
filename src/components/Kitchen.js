@@ -16,7 +16,9 @@ export default function Kitchen() {
 
   useEffect(() => {
     getItems();
+
   }, []);
+
 
   
 
@@ -25,15 +27,29 @@ export default function Kitchen() {
       <h2>To buy</h2>
       <div className="card-container">
         {items.map((item, i) => {
+
+
           // Return the element. Also pass key
-          return <KitchenItemCard key={item.id} itemname={item.name} alttext={item.name} type="to-buy-card" imgsrc={Finances} />
+          console.log(item.status)
+
+          return <KitchenItemCard key={item.id} itemname={item.name} alttext={item.name} type="to-buy-card" imgsrc={Finances} style={ item.status === "needed" ? { display:'block'} : {display: 'none'}}/>
           /* return <PostCard key={wm.id} wm={wm} users={users} />; */
         })}
 
         
       </div>
-      <h2>In house</h2>
-      <h3>Groceries</h3>
+     <h2>In house</h2>
+     <div className="card-container">
+        {items.map((item, i) => {
+          // Return the element. Also pass key
+          return <KitchenItemCard key={item.id} itemname={item.name} alttext={item.name} type="to-buy-card" imgsrc={Finances} style={ item.status === "needed" ? { display:'none'} : {display: 'block'}}/>
+          /* return <PostCard key={wm.id} wm={wm} users={users} />; */
+        })}
+
+        
+      </div>
+
+       {/* <h3>Groceries</h3>
       <div className="card-container">
         <div className="in-house-card">
           <img src={Finances} alt="onion" />
@@ -72,7 +88,7 @@ export default function Kitchen() {
           <p>Onion</p>
           <p>!!!</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
