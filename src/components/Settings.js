@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Settings() {
+export default function Settings(props) {
   return (
     <div className="settings">
 
@@ -24,6 +24,7 @@ export default function Settings() {
 
       <div className="view-all">
         <p className="settings-text">Your dorm8s</p>
+        {props.lease.tenants}
       </div>
 
     </div>
