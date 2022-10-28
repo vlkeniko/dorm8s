@@ -699,10 +699,12 @@ input:checked + .slider:before {
   display: none;
 }
 .see-more_more-checkbox:checked ~ li {
-  display: flex;
+  display:inline;
+  flex-direction: column;
 }
 .see-more_more-checkbox:checked ~ .see-more__less-label {
   display: block;
+  text-align: center;
 }
 .see-more_more-checkbox ~ li {
   display: none;
@@ -710,16 +712,17 @@ input:checked + .slider:before {
 
 .see-more_less-label,
 .see-more_more-label {
-  background: #3a0775;
-  color: white;
   display: inline-block;
-  margin: 16px 0;
-  padding: 16px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .see-more_less-label span,
 .see-more_more-label span {
   align-items: center;
-  display: flex;
+  display: inherit;
+  text-align: center;
 }
 .see-more_less-label span svg,
 .see-more_more-label span svg {
