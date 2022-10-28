@@ -4,7 +4,7 @@ export default function Machine() {
   return (
     <div className='machine'>
         <div className='icon'>
-            <img src={require('../../pictures/laundry.png')} />
+            <img src={require('../../pictures/laundry.png')} alt="Icon with a washing machine"/>
         </div>
         <p className='number'>
             1 {/* db insert */}
