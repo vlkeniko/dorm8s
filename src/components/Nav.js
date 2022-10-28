@@ -27,10 +27,10 @@ export default function Nav() {
           </NavLink>
         </div>
 
-        <div className="navlink-container">
+        {/* <div className="navlink-container">
           <NavLink className="navlink" to="/login">
           </NavLink>
-        </div>
+        </div> */}
       </nav>
       <div className="navlink-container">
         <NavLink className="navlink navlink-profile" to="/profile">

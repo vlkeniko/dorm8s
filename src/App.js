@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={JSON.parse(localStorage.getItem("loggedinname")) === null ? <LoginPage /> : <HomePage /> } />
         <Route path="/kitchen" element={<KitchenPage />} />
         <Route path="/laundry" element={<LaundryPage />} />
         <Route path="/finances" element={<FinancesPage />} />
