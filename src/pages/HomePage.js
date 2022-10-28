@@ -54,9 +54,7 @@ export default function HomePage() {
       </article>
       {/* 
       <p>You are logged in as {currentuser.username}</p> */}
-
-      <h1 className="header-title">HomePage</h1>
-      <h1>
+      <h1 className="header-title">
         {JSON.parse(localStorage.getItem("loggedinname"))
           ? `Hello ${JSON.parse(localStorage.getItem("loggedinname"))}`
           : ""}

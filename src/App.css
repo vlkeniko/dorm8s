@@ -649,3 +649,62 @@ body {
   height: 35px; 
   background-color: #DA8484;
 }
+
+/* See more button - finances */
+
+.transactions > li {
+  list-style: none;
+}
+
+.see-more_more-checkbox {
+  display: none;
+}
+.see-more_more-checkbox:checked + .see-more__more-label {
+  display: none;
+}
+.see-more_more-checkbox:checked ~ li {
+  display:inline;
+  flex-direction: column;
+}
+.see-more_more-checkbox:checked ~ .see-more__less-label {
+  display: block;
+  text-align: center;
+}
+.see-more_more-checkbox ~ li {
+  display: none;
+}
+
+.see-more_less-label,
+.see-more_more-label {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.see-more_less-label span,
+.see-more_more-label span {
+  align-items: center;
+  display: inherit;
+  text-align: center;
+}
+.see-more_less-label span svg,
+.see-more_more-label span svg {
+  margin-left: 8px;
+}
+
+.see-more_less-checkbox {
+  order: 1;
+  display: none;
+}
+.see-more_less-checkbox:checked + .see-more_less-label {
+  display: none;
+}
+.see-more_less-checkbox:checked ~ li {
+  display: none;
+}
+
+.see-more_less-label {
+  display: none;
+  order: 1;
+}
