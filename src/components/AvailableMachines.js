@@ -4,34 +4,34 @@ import dryerMachine from "../pictures/dryer.png";
 
 export default function AvailableMachines() {
   return (
-    // <div className='availablemachines'>
-    //     <div className='availablewms'>
+    // <div classNameName='availablemachines'>
+    //     <div classNameName='availablewms'>
     //         <img src="../pictures/washing-machine.png" alt="Icon of a washing machine"></img>
     //         <span>Available Washing Machines</span>
     //     </div>
-    //     <div className='availabledryers'>
+    //     <div classNameName='availabledryers'>
     //       <img src="../pictures/dryer.png" alt="Icon of a dryer machine"></img>
     //       <span>Available Dryers</span>
     //     </div>
     // </div>
 
-    <div class="wm-wrapper">
-      <ul class="wm-flex wm-cards">
+    <div className="wm-wrapper">
+      <ul className="wm-flex wm-cards">
         <li>
-          <div class="notification-circle circle-left">
-            <div class="notification-text">5</div>
+          <div className="notification-circle circle-left">
+            <div className="notification-text">5</div>
           </div>
-          <div class="wm-icon">
+          <div className="wm-icon">
             <img src={washingMachine} alt="Icon of a washing machine" />
           </div>
           <p>Available washing machines</p>
         </li>
 
         <li>
-          <div class="notification-circle circle-right">
-            <div class="notification-text">9</div>
+          <div className="notification-circle circle-right">
+            <div className="notification-text">9</div>
           </div>
-          <div class="wm-icon">
+          <div className="wm-icon">
             <img src={dryerMachine} alt="Icon of a dryer machine" />
           </div>
           <p>Available dryers</p>
