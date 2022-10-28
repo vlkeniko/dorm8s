@@ -6,6 +6,9 @@ export default function Machine() {
         <div className='icon'>
             <img src={require('../../pictures/laundry.png')} />
         </div>
+        <p className='number'>
+            1 {/* db insert */}
+        </p>
         <p className='availability'>
             Available {/* db insert */}
         </p>

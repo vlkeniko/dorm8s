@@ -385,12 +385,19 @@ body {
 .machine .icon {
   /* background-color: var(--unavailable); */
   background-color: var(--available);
+  border-radius: 20%;
 }
 
 .availability {
   font-size: 20px;
   font-weight: bold;
   color: var(--main-blue);
+  }
+
+  .number {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--main-blue);
   }
 
   .bookbutton {
