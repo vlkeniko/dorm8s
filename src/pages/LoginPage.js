@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Route } from "react-router-dom";
 import Nav from "../components/Nav";
 
 // 📁 pages/HomePage.js
@@ -116,10 +116,18 @@ export default function LoginPage() {
     );
   }
   else {
+    function forceHomePage(time) {
+      setTimeout(() => {
+        window.location.href = "/home"
+      }, time)
+    }
+
     return (
       <>
-        <h2>You are logged in.</h2>
+        <h2>You are now logged in.</h2>
+        {forceHomePage(1500)}
         <Nav />
+        
       </>
     );
   }
