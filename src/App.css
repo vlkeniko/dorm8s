@@ -353,6 +353,7 @@ body {
   align-items: center;
   text-align: center;
   box-shadow: 4px 4px 3px rgb(199, 199, 199);
+  
 }
 
 .previousreservation{
@@ -489,7 +490,7 @@ body {
 }
 
 
-/* ---    CALENDAR - Home page    ---*/
+/* ---    CALENDAR - in Home page    ---*/
 .calendar-wrapper {
   font-family: 'Josefin Sans';
   margin-left: 5%;
@@ -571,116 +572,80 @@ body {
   margin-top: 0;
 }
 
-/* Washing Machines Homepage */
 
-.availablewms {
+/* ---    WASHING MACHINES - in Home page    ---*/
+.wm-wrapper {
+  font-family: 'Josefin Sans';
+  margin: 80px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.wm-flex {
   display: flex;
-}
-
-
-/*Profile*/
-
-.profile-information{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-image{
-  width: 100px;
-  height: 100px;
-}
-
-/*The settings*/
-
-.settings{
-  margin-top: 50px;
-}
-.settings-text{
-  font-size: 26px;
-}
-
-.view-all{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-}
-
-.settings-slider{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: row;
-  gap: 10px;
-  justify-content: flex-start;
-  align-items: center;
+  /* margin: 0 -10px; */
 }
 
-/*Switches*/
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+.wm-flex li {
+  text-align: center;
+  flex: 0 0 auto;
+  margin: 10px;
+  /* width: 60%; */
+  margin-bottom: 50px;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.wm-cards {
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  filter: drop-shadow(2px 4px 0.2rem rgba(0, 0, 0, 0.2));
 }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+.wm-cards li {
+  /*   border: 2px solid #490A3D; */
+  border-radius: 13px;
+  background-color: #F6FEFD;
+  color: #5A6EAB;
+  max-width: 60%;
+  text-align: center;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+.wm-icon {
+  /*   align-items: center; */
+  text-align: center;
+  margin: 30px 0 20px 0;
+  height: auto;
 }
 
-input:checked + .slider {
-  background-color: #5A6EAB;
+.wm-cards p {
+  color: #5A6EAB;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 22px;
+  padding-bottom: 30px;
+  margin-top: 0;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #5A6EAB;
+/* small circle with number for WM */
+.notification-text {
+  font-weight: bold;
+	font-size: 2rem;
+	color: white;
+	text-align: center;
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
+.notification-circle {
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
   border-radius: 50%;
+  width: 35px;
+  height: 35px; 
+  background-color: #DA8484;
 }
