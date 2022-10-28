@@ -355,14 +355,49 @@ body {
   box-shadow: 4px 4px 3px rgb(199, 199, 199);
 }
 
-.machine {
+.previousreservation{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 30px;
+  margin-bottom: 20px;
   display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 10px 30px;
+  justify-content: space-around;
+  border-radius: 30px;
+  background-color: var(--light-blue);
+  filter: drop-shadow(2px 4px 0.2rem rgba(0, 0, 0, 0.2));
+}
+
+.machine {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-around;
+  border-radius: 30px;
 }
 
 .machine .icon {
   /* background-color: var(--unavailable); */
   background-color: var(--available);
 }
+
+.availability {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--main-blue);
+  }
+
+  .bookbutton {
+    color: white;
+    width: 20%;
+    text-transform: uppercase;
+  }
 
 
 /* The Modal (background) */
