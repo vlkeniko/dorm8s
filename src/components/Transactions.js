@@ -34,9 +34,9 @@ export default function Transactions() {
 
       {/* See more button */}
 
-      <input type="checkbox" id="more" name="view more requested cities" class="see-more__more-checkbox" /><label class="see-more__more-label" for="more"><span>See more
+      <input type="checkbox" id="more" name="view more requested cities" className="see-more__more-checkbox" /><label className="see-more__more-label" for="more"><span>See more
       </span></label>
-      <input type="checkbox" id="more" name="view more requested cities" class="see-more__less-checkbox" /><label class="see-more__less-label" for="more"><span>Collapse
+      <input type="checkbox" id="more" name="view more requested cities" className="see-more__less-checkbox" /><label className="see-more__less-label" for="more"><span>Collapse
       </span></label>
 
       {/* The rest of transactions */}
