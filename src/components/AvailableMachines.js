@@ -18,18 +18,17 @@ export default function AvailableMachines() {
     <div class="wm-wrapper">
       <ul class="wm-flex wm-cards">
         <li>
+          <div class="notification-circle circle-left">
+            <div class="notification-text">5</div>
+          </div>
           <div class="wm-icon">
             <img src={washingMachine} alt="Icon of a washing machine" />
           </div>
           <p>Available washing machines</p>
-
-          <div class="notification-circle">
-            <div class="notification-text">5</div>
-          </div>
         </li>
 
         <li>
-          <div class="notification-circle">
+          <div class="notification-circle circle-right">
             <div class="notification-text">9</div>
           </div>
           <div class="wm-icon">
