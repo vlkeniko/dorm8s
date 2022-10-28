@@ -1,5 +1,5 @@
 body {
-  padding: 0;
+  padding: 20px 0 0 0;
   margin: 0;
   border: 0;
   font-family: 'Josefin Sans', sans-serif;
@@ -13,7 +13,7 @@ body {
   --light-gray: #a7aabc;
   --dark-gray: #434656;
   --main-blue: #5a6eab;
-  --light-blue: #e8fdff;
+  --light-blue: #F6FEFD;
   --coral: #e48b94;
   --available: #219284;
   --unavailable: #E48B94;
@@ -196,10 +196,12 @@ body {
 
 .navlink-profile {
   position: absolute;
-  top: 2%;
+  top: 40px;
   right: 5%;
-  width: 50px;
-  height: 5 0px;
+  width: 20px;
+  height: 20px;
+  border: var(--main-blue) 2px solid;
+  border-radius: 50%;
 }
 
 .nav-icon {
@@ -212,18 +214,27 @@ body {
 .balance {
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
-  border-radius: 5px;
-  margin-left: 5%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 10px;
   justify-content: space-around;
-  padding: 10px;
-  border: 1px #5A6EAB solid;
   border-radius: 30px;
+  background-color: var(--light-blue);
+  filter: drop-shadow(2px 4px 0.2rem rgba(0, 0, 0, 0.2));
+}
 
+.balance h3 {
+  font-size: 22px;
+  text-align: left;
+  color: var(--dark-gray);
+}
+
+.amount {
+  font-size: 30px;
+  text-align: right;
+  color: var(--main-blue);
 }
 
 /*Transactions*/
@@ -406,7 +417,7 @@ body {
   cursor: pointer;
 }
 
-#fileUpload{
+#fileUpload {
   width: 90%;
   margin-top: 30px;
   padding-left: 10px;
@@ -423,7 +434,7 @@ body {
   border-radius: 30px;
 }
 
-.reciept-button{
+.reciept-button {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -439,77 +450,87 @@ body {
 /* ---    CALENDAR - Home page    ---*/
 .calendar-wrapper {
   font-family: 'Josefin Sans';
-  margin: 0 auto;
-  width: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .calendar-flex {
   display: flex;
   flex-wrap: wrap;
-/*   margin: 0 -10px; */
+  flex-direction: row;
+  /*   margin: 0 -10px; */
 }
 
 .calendar-flex li {
   text-align: center;
   flex: 1 1 200px;
   margin: 10px;
+  width: 25%;
 }
 
 .calendar-cards {
   list-style: none;
   margin: 0;
-  height: 250px;
-/*   padding: 0; */
+  height: 200px;
+  padding: 0;
+  filter: drop-shadow(2px 4px 0.2rem rgba(0, 0, 0, 0.2));
+
 }
 
 .calendar-cards li {
-/*   border: 2px solid #490A3D; */
-  border-radius:13px;
+  /*   border: 2px solid #490A3D; */
+  border-radius: 13px;
   background-color: #5A6EAB;
   color: #fff;
-/*   flex: 1 1 200px; */
-  max-width: 150px;
+  /*   flex: 1 1 200px; */
+  max-width: 96px;
   text-align: center;
-/*   display: flex; */
-/*   flex-wrap: wrap; */
+  /*   display: flex; */
+  /*   flex-wrap: wrap; */
 }
 
 .date-nr {
   display: flex;
-/*   align-items: center; */
+  /*   align-items: center; */
   text-align: center;
   margin-left: 20px;
   margin-right: 20px;
 }
 
 .nr {
-/*   background-color: #490A3D; */
+  /*   background-color: #490A3D; */
   color: white;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
-/*   padding: 10px; */
-/*   padding-right: 0; */
-  font-size: 85px;
+  /*   padding: 10px; */
+  /*   padding-right: 0; */
+  font-size: 60px;
   font-weight: bold;
-/*   display: flex; */
+  /*   display: flex; */
 }
 
 .vertical-date {
-/*   background-color: green; */
+  /*   background-color: green; */
   transform: rotate(90deg);
-  font-size: 25px;
+  font-size: 19px;
   font-weight: semibold;
   height: 20%;
-  margin-top: 40px;
-  margin-left: -20px;
+  margin-top: 30px;
+  margin-left: -15px;
 }
 
 .calendar-cards p {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: medium;
-  line-height: 29px;
+  line-height: 25px;
   padding-bottom: 50px;
   margin-top: 0;
+}
+
+/* Washing Machines Homepage */
+
+.availablewms {
+  display: flex;
 }
