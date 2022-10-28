@@ -6,7 +6,7 @@ import Transactions from "../components/Transactions";
 export default function FinancesPage() {
   return (
     <>
-      <h1>Finances</h1>
+      <h1 class="header-title">Finances</h1>
       <Balance/>
       <Transactions/>
       <FinanceButtons/>
