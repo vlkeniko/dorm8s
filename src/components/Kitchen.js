@@ -5,6 +5,8 @@ import KitchenItemCard from "./KitchenItemCard.js";
 
 export default function Kitchen() {
 
+
+
   const [items, setItems] = useState([]);
  
   /* Getting items data */
@@ -20,8 +22,6 @@ export default function Kitchen() {
   }, []);
 
 
-  
-
   return (
     <div className="kitchen-cards">
       <h2>To buy</h2>
@@ -32,7 +32,7 @@ export default function Kitchen() {
           // Return the element. Also pass key
           console.log(item.status)
 
-          return <KitchenItemCard key={item.id} itemname={item.name} alttext={item.name} type="to-buy-card" imgsrc={Finances} style={ item.status === "needed" ? { display:'block'} : {display: 'none'}}/>
+          return <KitchenItemCard key={item.id} itemstatus={item.status} itemname={item.name} alttext={item.name} type="to-buy-card" imgsrc={Finances} />
           /* return <PostCard key={wm.id} wm={wm} users={users} />; */
         })}
 
@@ -42,7 +42,7 @@ export default function Kitchen() {
      <div className="card-container">
         {items.map((item, i) => {
           // Return the element. Also pass key
-          return <KitchenItemCard key={item.id} itemname={item.name} alttext={item.name} type="to-buy-card" imgsrc={Finances} style={ item.status === "needed" ? { display:'none'} : {display: 'block'}}/>
+          return <KitchenItemCard key={item.id} itemstatus={item.status} itemname={item.name} alttext={item.name} type="to-buy-card" imgsrc={Finances} />
           /* return <PostCard key={wm.id} wm={wm} users={users} />; */
         })}
 
