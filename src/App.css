@@ -489,7 +489,7 @@ body {
 }
 
 
-/* ---    CALENDAR - Home page    ---*/
+/* ---    CALENDAR - in Home page    ---*/
 .calendar-wrapper {
   font-family: 'Josefin Sans';
   margin-left: 5%;
@@ -571,8 +571,80 @@ body {
   margin-top: 0;
 }
 
-/* Washing Machines Homepage */
 
-.availablewms {
+/* ---    WASHING MACHINES - in Home page    ---*/
+.wm-wrapper {
+  font-family: 'Josefin Sans';
+  margin: 80px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.wm-flex {
   display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  /* margin: 0 -10px; */
+}
+
+.wm-flex li {
+  text-align: center;
+  flex: 0 0 auto;
+  margin: 10px;
+  /* width: 60%; */
+  margin-bottom: 50px;
+}
+
+.wm-cards {
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  filter: drop-shadow(2px 4px 0.2rem rgba(0, 0, 0, 0.2));
+}
+
+.wm-cards li {
+  /*   border: 2px solid #490A3D; */
+  border-radius: 13px;
+  background-color: #F6FEFD;
+  color: #5A6EAB;
+  max-width: 60%;
+  text-align: center;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+.wm-icon {
+  /*   align-items: center; */
+  text-align: center;
+  margin: 30px 0 20px 0;
+  height: auto;
+}
+
+.wm-cards p {
+  color: #5A6EAB;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 22px;
+  padding-bottom: 30px;
+  margin-top: 0;
+}
+
+/* small circle with number for WM */
+.notification-text {
+  font-weight: bold;
+	font-size: 2rem;
+	color: white;
+	text-align: center;
+}
+
+.notification-circle {
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px; 
+  background-color: #DA8484;
 }
