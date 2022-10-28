@@ -39,7 +39,7 @@ export default function HomePage() {
     getLeases();
   }, []);
 
-  let balance = JSON.parse(localStorage.getItem("loggedinbalance"));
+  let balance = localStorage.getItem("loggedinbalance")?.length > 0 ? JSON.parse(localStorage.getItem("loggedinbalance")) : "N/A";
 
   return (
     <>

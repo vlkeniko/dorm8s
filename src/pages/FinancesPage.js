@@ -3,11 +3,14 @@ import Nav from "../components/Nav";
 import Balance from "../components/Balance";
 import FinanceButtons from "../components/FinanceButtons";
 import Transactions from "../components/Transactions";
+
 export default function FinancesPage() {
+  let balance = localStorage.getItem("loggedinbalance")?.length > 0 ? JSON.parse(localStorage.getItem("loggedinbalance")) : "N/A";
+  
   return (
     <>
       <h1 class="header-title">Finances</h1>
-      <Balance/>
+      <Balance balance={balance}/>
       <Transactions/>
       <FinanceButtons/>
       <Nav />
