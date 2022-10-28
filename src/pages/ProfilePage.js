@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from '../components/Nav'
 import Profile from '../components/Profile'
+import Settings from '../components/Settings'
 export default function ProfilePage() {
   
   return (
@@ -8,9 +9,9 @@ export default function ProfilePage() {
     <h1 className="header-title">Profile</h1>
 
 
-    {/* <Profile/> */}
+    <Profile/>
+    <Settings/>
     <Nav/>
-    <ProfilePage/>
     </>
   )
 }
