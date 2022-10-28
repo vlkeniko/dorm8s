@@ -119,7 +119,6 @@ export default function LoginPage() {
     return (
       <>
         <h2>You are logged in.</h2>
-        <Nav />
       </>
     );
   }
