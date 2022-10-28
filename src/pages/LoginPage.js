@@ -64,6 +64,7 @@ export default function LoginPage() {
 
           localStorage.setItem("loggedinid", JSON.stringify(user.id));
           localStorage.setItem("loggedinname", JSON.stringify(user.username));
+          localStorage.setItem("loggedinbalance", JSON.stringify(user.balance));
           navigate(`/${JSON.stringify(currentuser)}`);
         } else {
           setErrorMessage("Incorrect password or username");
