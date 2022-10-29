@@ -19,7 +19,7 @@ export default function AvailableMachines() {
       <ul className="wm-flex wm-cards">
         <li>
           <div className="notification-circle circle-left">
-            <div className="notification-text">5</div>
+            <div className="notification-text">3</div>
           </div>
           <div className="wm-icon">
             <img src={washingMachine} alt="Icon of a washing machine" />
@@ -29,7 +29,7 @@ export default function AvailableMachines() {
 
         <li>
           <div className="notification-circle circle-right">
-            <div className="notification-text">9</div>
+            <div className="notification-text">1</div>
           </div>
           <div className="wm-icon">
             <img src={dryerMachine} alt="Icon of a dryer machine" />
