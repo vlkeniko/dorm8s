@@ -201,14 +201,17 @@ body {
   right: 5%;
   width: 20px;
   height: 20px;
-  border: var(--main-blue) 2px solid;
-  border-radius: 50%;
 }
 
 .nav-icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   color: white;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: var(--main-blue) 2px solid;
+  border-radius: 50%;
 }
 
 /*Balance*/
@@ -670,9 +673,13 @@ body {
   align-items: center;
 }
 
-.profile-image{
+.profile-img{
   width: 100px;
   height: 100px;
+  color: white;
+  border-radius: 50%;
+  object-fit: cover;
+  border: var(--main-blue) 2px solid;
 }
 
 /*The settings*/

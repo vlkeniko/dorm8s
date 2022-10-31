@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { endpoint, getFromEndpoint } from "../utils/database_functions";
-import profile from "../pictures/profile.png";
+import profile from "../pictures/profilepic.jpg";
 import { forceHomePage } from "../pages/LoginPage";
 
 export default function Profile(props) {
@@ -14,7 +14,7 @@ export default function Profile(props) {
   return (
     <div className="profile-information">
       <div className="profile-image">
-        <img className="profile-image" src={profile} alt="profile"></img>
+        <img className="profile-image profile-img" src={profile} alt="profile"></img>
       </div>
       <div className="profile-text">
         <h1>Name: {props.user.name}</h1>
