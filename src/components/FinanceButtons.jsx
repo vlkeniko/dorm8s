@@ -99,7 +99,7 @@ export default function FinanceButtons() {
         </a>
         {/*Clicking this button will open the modal*/}
         <button className="finance-button" id="myBtn">
-          Add reciept
+          Add receipt
         </button>
       </div>
       <div id="myModal" className="modal">
