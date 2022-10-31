@@ -2,8 +2,13 @@ import React from 'react'
 
 export default function KitchenItemCard(props) {
 
-  function handleClick () {
-    props.itemstatus = "not needed"
+  function handleClick() {
+    //changing the status on click
+    this.setState({
+      itemstatus: "not needed",
+    });
+    //refresh page
+    window.location.reload(false);
   }
   
   return (
