@@ -1,7 +1,7 @@
 // This documment shows the menuitems(links) in the app's main navigation menu
 // Implemented by app.js.
 import { NavLink } from "react-router-dom";
-import Profile from "../pictures/profilepic.jpg";
+
 
 export default function Nav() {
   return (
@@ -32,11 +32,11 @@ export default function Nav() {
           </NavLink>
         </div> */}
       </nav>
-      <div className="navlink-container">
+     {/*  <div className="navlink-container">
         <NavLink className="navlink navlink-profile" to="/profile">
           <img src={Profile} alt="Profile frame" className="nav-icon"/>
         </NavLink>
-      </div>
+      </div> */}
     </div>
   );
 }

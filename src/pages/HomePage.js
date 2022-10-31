@@ -5,6 +5,7 @@ import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import AvailableMachines from "../components/AvailableMachines";
 import PostCard from "../components/PostCard.js";
+import ProfileNav from "../components/ProfileNav";
 import { endpoint, getFromEndpoint } from "../utils/database_functions.js";
 
 export default function HomePage() {
@@ -46,6 +47,7 @@ export default function HomePage() {
 
   return (
     <>
+    <ProfileNav/>
       <article>
         {/*Sorry for the ugly way of hiding the washing machine display*/}
         <div style={{ display: "none" }}>
