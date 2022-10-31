@@ -40,7 +40,7 @@ export default function HomePage() {
   }, []);
 
   /* if loggedinbalance is missing from localStorage for whatever reason
-  getItem() will convert the undefined value to a string,
+  setItem() will convert the undefined value to a string,
   so we need to check for case too with the !== "undefined" part */
   let balance = localStorage.getItem("loggedinbalance")?.length > 0 && localStorage.getItem("loggedinbalance") !== "undefined" ? JSON.parse(localStorage.getItem("loggedinbalance")) : "N/A";
 
