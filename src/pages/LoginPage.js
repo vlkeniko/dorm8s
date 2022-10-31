@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import { useNavigate, Route } from "react-router-dom";
 import Nav from "../components/Nav";
 
+export function forceHomePage(time) {
+  setTimeout(() => {
+    window.location.href = "/home"
+  }, time)
+}
+
 // 📁 pages/HomePage.js
 export default function LoginPage() {
   // Defines initial states of data values
@@ -116,12 +122,6 @@ export default function LoginPage() {
     );
   }
   else {
-    function forceHomePage(time) {
-      setTimeout(() => {
-        window.location.href = "/home"
-      }, time)
-    }
-
     return (
       <>
         <h2>You are now logged in.</h2>
