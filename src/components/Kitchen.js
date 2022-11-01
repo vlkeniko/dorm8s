@@ -34,6 +34,7 @@ export default function Kitchen() {
               alttext={item.name}
               type="to-buy-card"
               imgsrc={Finances}
+              className={item.class}
             />
           );
         })}
@@ -51,6 +52,7 @@ export default function Kitchen() {
               alttext={item.name}
               type="to-buy-card"
               imgsrc={Finances}
+              className={item.class}
             />
           );
         })}
