@@ -5,6 +5,7 @@ export default function Machine(props) {
     console.log(id);
     console.log(document.getElementById(id).style);
     document.getElementById(id).style.backgroundColor = "#E48B94";
+    document.getElementById("availability" + id).innerHTML = "Reserved";
   }
 
   return (
@@ -23,9 +24,9 @@ export default function Machine(props) {
         />
       </div>
       <p className="number">{props.no}</p>
-      <p className="availability">
+      <p id={"availability" + (props.type === "wash" ? "wm" : "dm") + props.no} className="availability">
         {/* Here we set the text */}
-        {props.available === "yes" ? "Available" : "Time left"}
+        {props.available === "yes" ? "Available" : "Time left" }
       </p>
 
       <button
