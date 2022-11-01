@@ -1,6 +1,5 @@
 import { useEffect, useState, React } from "react";
 import { endpoint, getFromEndpoint } from "../utils/database_functions.js";
-import Finances from "../pictures/finances.png";
 import KitchenItemCard from "./KitchenItemCard.js";
 import KitchenItemCardNotNeeded from "./KitchenItemCardNotNeeded.js";
 

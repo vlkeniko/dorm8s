@@ -60,12 +60,6 @@ export default function LoginPage() {
           formData.username === user.username &&
           formData.password === user.password
         ) {
-          console.log("bingo");
-          const currentuser = {
-            id: user.id,
-            username: user.username,
-          };
-
           // Setting user data to localStorage
           localStorage.setItem("loggedinid", JSON.stringify(user.id));
           localStorage.setItem("loggedinname", JSON.stringify(user.username));
