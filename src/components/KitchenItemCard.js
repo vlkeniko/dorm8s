@@ -1,12 +1,17 @@
-import React from 'react'
+import {React} from 'react'
 
 export default function KitchenItemCard(props) {
+
 
   function handleClick() {
     //changing the status on click
     this.setState({
       itemstatus: "not needed",
     });
+
+    //then publishing it to the database
+
+
     //refresh page
     window.location.reload(false);
   }
