@@ -274,6 +274,14 @@ body {
   color: #E48B94;
 }
 
+.transactions-hr {
+  color: #5a6eab;
+  background-color: #5a6eab;
+  border: 0.5px solid;
+  border-radius: 5px;
+  /* margin: 0 10px 30px 10px; */
+}
+
 /*Finance-buttons*/
 
 .finance-buttons {
@@ -412,6 +420,7 @@ body {
   .bookbutton {
     color: white;
     width: 20%;
+    height: 25px;
     text-transform: uppercase;
   }
 
@@ -668,6 +677,13 @@ body {
 }
 
 /*Profile*/
+.profile-hr {
+  color: #5a6eab;
+  border: 2px solid;
+  border-radius: 5px;
+  fill: none;
+  margin: 0 10px 30px 10px;
+}
 
 .profile-information{
   display: flex;
@@ -686,6 +702,28 @@ body {
   border: var(--main-blue) 2px solid;
 }
 
+.profile-text h3 {
+  text-align: center;
+  line-height: 2px;
+  font-weight: 400;
+}
+
+.logoutbutton {
+  text-align: center;
+  width: 40%;
+  height: 35px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 20px;
+
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  /* -ms-transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
+}
+
 /*The settings*/
 
 .settings{
@@ -693,6 +731,8 @@ body {
 }
 .settings-text{
   font-size: 26px;
+  color: #5A6EAB;
+  font-weight: 500;
 }
 
 .view-all{
@@ -700,6 +740,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+}
+
+.dorm8s-text {
+  color: #5a6eab;
+  text-transform: capitalize;
+  font-size: 15px;
+  margin-left: 5px;
+  font-weight: 500;
 }
 
 .settings-slider{
