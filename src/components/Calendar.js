@@ -2,32 +2,6 @@ import React from "react";
 
 export default function Calendar() {
   return (
-    // <div classNameName="calendar">
-    //   <div classNameName="event">
-    //     <div classNameName="date">
-    //       <div classNameName="day">11</div>
-    //       <div classNameName="month">OCT</div>
-    //     </div>
-    //     <div classNameName="event-title">Kitchen Meeting</div>
-    //   </div>
-
-    //   <div classNameName="event">
-    //     <div classNameName="date">
-    //       <div classNameName="day">22</div>
-    //       <div classNameName="month">OCT</div>
-    //     </div>
-    //     <div classNameName="event-title">Cleaning duty</div>
-    //   </div>
-
-    //   <div classNameName="event">
-    //     <div classNameName="date">
-    //       <div classNameName="day">30</div>
-    //       <div classNameName="month">OCT</div>
-    //     </div>
-    //     <div classNameName="event-title">Kitchen tax due date</div>
-    //   </div>
-    // </div>
-
     <div className="calendar-wrapper">
       <ul className="calendar-flex calendar-cards">
         <li>

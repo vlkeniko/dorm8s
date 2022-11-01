@@ -1,20 +1,9 @@
-import React from 'react';
+import React from "react";
 import washingMachine from "../pictures/washing-machine.png";
 import dryerMachine from "../pictures/dryer.png";
 
 export default function AvailableMachines() {
   return (
-    // <div classNameName='availablemachines'>
-    //     <div classNameName='availablewms'>
-    //         <img src="../pictures/washing-machine.png" alt="Icon of a washing machine"></img>
-    //         <span>Available Washing Machines</span>
-    //     </div>
-    //     <div classNameName='availabledryers'>
-    //       <img src="../pictures/dryer.png" alt="Icon of a dryer machine"></img>
-    //       <span>Available Dryers</span>
-    //     </div>
-    // </div>
-
     <div className="wm-wrapper">
       <ul className="wm-flex wm-cards">
         <li>
