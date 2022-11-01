@@ -4,7 +4,7 @@ import Nav from "../components/Nav";
 
 export function forceHomePage(time) {
   setTimeout(() => {
-    window.location.href = "/";
+    window.location.href = "/dorm8ts.build/";
   }, time);
 }
 
@@ -18,8 +18,7 @@ export default function LoginPage() {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
-  // Fetch is run to get list of users from
-  // users.json file in public folder
+  // Fetch is run to get list of users from the firebase
   const getUsers = () => {
     fetch(
       "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app/Users.json"
@@ -64,7 +63,7 @@ export default function LoginPage() {
           localStorage.setItem("loggedinid", JSON.stringify(user.id));
           localStorage.setItem("loggedinname", JSON.stringify(user.username));
           localStorage.setItem("loggedinbalance", JSON.stringify(user.balance));
-          navigate(`/`);
+          navigate(`/dorm8ts.build/`);
         } else {
           setErrorMessage("Incorrect password or username");
         }

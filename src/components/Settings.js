@@ -1,5 +1,5 @@
 import React from "react";
-
+//Made by Eniko styled: Giulia
 export default function Settings(props) {
   return (
     <div className="settings">
@@ -23,6 +23,7 @@ export default function Settings(props) {
 
       <div className="view-all">
         <p className="settings-text">Your DORM8s</p>
+        {/*Show Id of tenants: Lajos*/}
         <p className="dorm8s-text">{props.lease.tenants}</p>
       </div>
     </div>

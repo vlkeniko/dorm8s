@@ -1,5 +1,5 @@
 import React from "react";
-
+//Lajos, Eniko
 export default function KitchenItemCardNotNeeded(props) {
   return (
     <div

@@ -1,5 +1,5 @@
 import React from "react";
-
+//Lajos
 export default function Machine(props) {
   function changeIconColor(id) {
     console.log(id);

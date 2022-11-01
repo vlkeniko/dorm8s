@@ -1,5 +1,5 @@
 import React from "react";
-
+//Giulia, Eniko, Razvan
 export default function Transactions() {
   return (
     <div className="transactions">

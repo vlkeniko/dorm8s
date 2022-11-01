@@ -1,7 +1,9 @@
 import { React } from "react";
 import profile from "../pictures/profilepic.jpg";
 import { forceHomePage } from "../pages/LoginPage";
-
+//Giulia
+//switch Eniko (Inspired by W3schools switchs)
+//Log out function: Lajos
 export default function Profile(props) {
   let loggedinid = JSON.parse(localStorage.getItem("loggedinid"));
 

@@ -2,7 +2,7 @@ import { useEffect, useState, React } from "react";
 import { endpoint, getFromEndpoint } from "../utils/database_functions.js";
 import KitchenItemCard from "./KitchenItemCard.js";
 import KitchenItemCardNotNeeded from "./KitchenItemCardNotNeeded.js";
-
+//Eniko, Lajos
 export default function Kitchen() {
   const [items, setItems] = useState([]);
 

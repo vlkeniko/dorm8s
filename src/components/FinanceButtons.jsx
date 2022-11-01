@@ -6,6 +6,8 @@ import { useEffect } from "react";
 import budget from "../pictures/budget.png";
 import invoice from "../pictures/invoice.png";
 
+//Eniko
+
 export default function FinanceButtons() {
   useEffect(() => {
     // Get the modal
@@ -35,6 +37,7 @@ export default function FinanceButtons() {
     };
   }, []);
 
+  
   const [formData, setFormData] = useState({
     image: "",
     createdAt: Timestamp.now().toDate(),

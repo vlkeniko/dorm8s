@@ -1,7 +1,7 @@
 import React from "react";
 import Machine from "../components/WM/Machine";
 import { LaundryData } from "../laundry";
-
+//Lajos, Razvan
 export default function WM() {
   return (
     <div className="machines">
