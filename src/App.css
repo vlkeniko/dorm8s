@@ -372,10 +372,10 @@ body {
   align-items: center;
   text-align: center;
   box-shadow: 4px 4px 3px rgb(199, 199, 199);
-  
+
 }
 
-.previousreservation{
+.previousreservation {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 30px;
@@ -419,21 +419,21 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: var(--main-blue);
-  }
+}
 
-  .number {
-    font-size: 24px;
-    font-weight: 900;
-    color: var(--main-blue);
-  }
+.number {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--main-blue);
+}
 
-  .bookbutton {
-    color: white;
-    /*width: 20%;
+.bookbutton {
+  color: white;
+  /*width: 20%;
     height: 25px; */
-    background-color: #5A6EAB;
-    text-transform: uppercase;
-  }
+  background-color: #5A6EAB;
+  text-transform: uppercase;
+}
 
 
 /* The Modal (background) */
@@ -664,15 +664,15 @@ body {
 /* small circle with number for WM */
 .notification-text {
   font-weight: bold;
-	font-size: 2rem;
-	color: white;
-	text-align: center;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
   padding-top: 8px;
 }
 
 .notification-circle {
- 	position: absolute;
- 	top: 0;
+  position: absolute;
+  top: 0;
   border-radius: 50%;
   width: 45px;
   height: 45px;
@@ -696,7 +696,7 @@ body {
   margin: 0 10px 30px 10px;
 }
 
-.profile-information{
+.profile-information {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -704,7 +704,7 @@ body {
   align-items: center;
 }
 
-.profile-img{
+.profile-img {
   width: 100px;
   height: 100px;
   color: white;
@@ -735,7 +735,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
- .logoutbutton:hover {
+.logoutbutton:hover {
   text-align: center;
   width: 40%;
   height: 35px;
@@ -748,20 +748,21 @@ body {
   left: 50%;
   /* -ms-transform: translate(-50%, -50%); */
   transform: translate(-50%, -50%);
- }
+}
 
 /*The settings*/
 
-.settings{
+.settings {
   margin-top: 50px;
 }
-.settings-text{
+
+.settings-text {
   font-size: 26px;
   color: #5A6EAB;
   font-weight: 500;
 }
 
-.view-all{
+.view-all {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -776,7 +777,7 @@ body {
   font-weight: 500;
 }
 
-.settings-slider{
+.settings-slider {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -829,15 +830,15 @@ body {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #5A6EAB;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #5A6EAB;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -850,5 +851,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-
 }
