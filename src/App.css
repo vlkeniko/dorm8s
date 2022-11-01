@@ -651,6 +651,10 @@ body {
   height: auto;
 }
 
+#wash {
+  width: 78px;
+}
+
 .wm-cards p {
   color: #5A6EAB;
   font-size: 15px;
