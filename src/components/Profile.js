@@ -20,7 +20,7 @@ export default function Profile(props) {
         <h1>Name: {props.user.name}</h1>
         <h3>{props.lease.address}</h3>
         <h3>Lease: {props.user.leasenum}</h3>
-        {loggedinid && loggedinid.length > 0 ? <button onClick={handleLogout} className="logoutbutton">Log out</button> : ""}
+        {loggedinid && loggedinid.length > 0 ? <button onClick={handleLogout} className="logoutbutton nohover">Log out</button> : ""}
       </div>
     </div>
   );

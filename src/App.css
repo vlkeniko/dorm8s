@@ -291,6 +291,7 @@ body {
   margin-top: 5px;
   margin-bottom: 5px;
   justify-content: center;
+  gap: 15px;
 }
 
 .finance-button {
@@ -723,6 +724,21 @@ body {
   /* -ms-transform: translate(-50%, -50%); */
   transform: translate(-50%, -50%);
 }
+
+ .logoutbutton:hover {
+  text-align: center;
+  width: 40%;
+  height: 35px;
+  color: #5A6EAB;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 20px;
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  /* -ms-transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
+ }
 
 /*The settings*/
 
