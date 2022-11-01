@@ -12,7 +12,7 @@ export default function KitchenItemCardNotNeeded(props) {
           "block";
       }}
     >
-      <img src={props.imgsrc} alt={props.alttext} />
+      <img className={props.type} src={props.imgsrc} alt={props.alttext} />
       <p>{props.itemname}</p>
     </div>
   );

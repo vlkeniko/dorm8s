@@ -11,7 +11,7 @@ export default function KitchenItemCard(props) {
         document.getElementById(props.itemid + "stock").style.display = "block";
       }}
     >
-      <img src={props.imgsrc} alt={props.alttext} />
+      <img className={props.type} src={props.imgsrc} alt={props.alttext} />
       <p>{props.itemname}</p>
     </div>
   );

@@ -33,8 +33,7 @@ export default function Kitchen() {
               itemname={item.name}
               alttext={item.name}
               type="kitchenItems-buttons"
-              imgsrc={Finances}
-              className={item.class}
+              imgsrc={require(`../pictures/${item.name}.png`)}
             />
           );
         })}
@@ -51,8 +50,7 @@ export default function Kitchen() {
               itemname={item.name}
               alttext={item.name}
               type="kitchenItems-buttons"
-              imgsrc={Finances}
-              className={item.class}
+              imgsrc={require(`../pictures/${item.name}.png`)}
             />
           );
         })}
