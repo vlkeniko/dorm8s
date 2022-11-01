@@ -1,6 +1,12 @@
 import React from "react";
 
 export default function Machine(props) {
+  function changeIconColor(id) {
+    console.log(id);
+    console.log(document.getElementById(id).style);
+    document.getElementById(id).style.backgroundColor = "#E48B94";
+  }
+
   return (
     /* Depending on each machines availability we set various attributes on the components */
     <div className="machine">
@@ -9,6 +15,7 @@ export default function Machine(props) {
           /* Here we set the icon color */
           props.available === "yes" ? "icon available" : "icon unavailable"
         }
+        id={(props.type === "wash" ? "wm" : "dm") + props.no}
       >
         <img
           src={require("../../pictures/laundry-white.png")}
@@ -23,11 +30,13 @@ export default function Machine(props) {
 
       <button
         /* Here we set the button's styling and an onClick() alert if needed */
-        className={props.available === "yes" ? "bookbutton" : "bookbutton-unavailable"}
+        className={
+          props.available === "yes" ? "bookbutton" : "bookbutton-unavailable"
+        }
         onClick={() =>
           props.available === "no"
             ? alert("You can't book this machine yet!")
-            : ""
+            : changeIconColor((props.type === "wash" ? "wm" : "dm") + props.no)
         }
       >
         {/* Here we set the button text */}
