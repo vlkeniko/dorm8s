@@ -11,7 +11,9 @@ export default function KitchenItemCard(props) {
       }}
     >
       <img className={props.type} src={props.imgsrc} alt={props.alttext} />
-      <p>{props.itemname}</p>
+      <p style={{color: "#5A6EAB", fontWeight: "bold", textTransform: "uppercase", fontSize: "12px", textAlign: "center" }}>
+        {props.itemname}
+      </p>
     </div>
   );
 }
