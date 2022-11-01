@@ -300,13 +300,12 @@ body {
   font-size: 13px;
   background-color: var(--white);
   padding-top: 20px;
-  width: 150px;
+  width: 160px;
   padding-bottom: 20px;
   border-radius: 20px;
   -webkit-box-shadow: 3px 7px 3px -3px #5A6EAB;
   box-shadow: 3px 7px 3px -3px #5A6EAB;
-  background-color: #F6FEFD;
-
+  background-color: #fff;
 }
 
 .finance-button:hover,
