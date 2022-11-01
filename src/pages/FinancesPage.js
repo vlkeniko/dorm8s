@@ -14,7 +14,7 @@ export default function FinancesPage() {
   return (
     <>
       <ProfileNav />
-      <h1 class="header-title">Finances</h1>
+      <h1 className="header-title">Finances</h1>
       <Balance balance={balance} />
       <Transactions />
       <FinanceButtons />
