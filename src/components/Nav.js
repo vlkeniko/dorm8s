@@ -2,41 +2,26 @@
 // Implemented by app.js.
 import { NavLink } from "react-router-dom";
 
-
 export default function Nav() {
   return (
     <div className="all-nav">
       <nav>
         <div className="navlink-container">
-          <NavLink className="navlink home" end to="/" >
-          </NavLink>
+          <NavLink className="navlink home" end to="/"></NavLink>
         </div>
 
         <div className="navlink-container">
-          <NavLink className="navlink kitchen" to="/kitchen">
-          </NavLink>
+          <NavLink className="navlink kitchen" to="/kitchen"></NavLink>
         </div>
 
         <div className="navlink-container">
-          <NavLink className="navlink laundry" to="/laundry">
-          </NavLink>
+          <NavLink className="navlink laundry" to="/laundry"></NavLink>
         </div>
 
         <div className="navlink-container">
-          <NavLink className="navlink finances" to="/finances">
-          </NavLink>
+          <NavLink className="navlink finances" to="/finances"></NavLink>
         </div>
-
-        {/* <div className="navlink-container">
-          <NavLink className="navlink" to="/login">
-          </NavLink>
-        </div> */}
       </nav>
-     {/*  <div className="navlink-container">
-        <NavLink className="navlink navlink-profile" to="/profile">
-          <img src={Profile} alt="Profile frame" className="nav-icon"/>
-        </NavLink>
-      </div> */}
     </div>
   );
 }
