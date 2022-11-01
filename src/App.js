@@ -17,7 +17,7 @@ export default function App() {
         <Route path="/dorm8ts.build/finances" element={<FinancesPage />} />
         <Route path="/dorm8ts.build/profile" element={<ProfilePage />} />
         <Route path="/dorm8ts.build/login" element={<LoginPage />} />
-        <Route path="/dorm8ts.build/" element={<Navigate to="/dorm8ts.build/" />} />
+        <Route path="/" element={<Navigate to="/dorm8ts.build/" />} />
       </Routes>
     </div>
   );
