@@ -4,7 +4,7 @@ import Nav from "../components/Nav";
 
 export function forceHomePage(time) {
   setTimeout(() => {
-    window.location.href = "/home";
+    window.location.href = "/";
   }, time);
 }
 
@@ -70,7 +70,7 @@ export default function LoginPage() {
           localStorage.setItem("loggedinid", JSON.stringify(user.id));
           localStorage.setItem("loggedinname", JSON.stringify(user.username));
           localStorage.setItem("loggedinbalance", JSON.stringify(user.balance));
-          navigate(`/${JSON.stringify(currentuser)}`);
+          navigate(`/`);
         } else {
           setErrorMessage("Incorrect password or username");
         }
