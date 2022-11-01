@@ -1,26 +1,17 @@
 import React from "react";
-
+import handleClick from "./Kitchen";
 
 export default function KitchenItemCardNotNeeded(props) {
-
-
-
-  function handleClick() {
-    //change the item status
-
-      //then publishing it to the database
-
-      //then refresh the page
-      window.location.reload(false);
-    }
-
-
-
   return (
     <div
+      id={props.itemid + "stock"}
       className={props.type}
       style={{ display: props.itemstatus === "needed" ? "none" : "block" }}
-      onClick={handleClick}
+      onClick={() => {
+        console.log(props.itemid + "stock");
+        document.getElementById(props.itemid + "stock").style.display = "none";
+        document.getElementById(props.itemid + "needed").style.display = "block";
+      }}
     >
       <img src={props.imgsrc} alt={props.alttext} />
       <p>{props.itemname}</p>

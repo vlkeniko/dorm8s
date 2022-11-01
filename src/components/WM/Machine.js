@@ -1,4 +1,5 @@
 import React from 'react'
+import { LaundryData } from "src\laundry";
 
 export default function Machine() {
   return (
