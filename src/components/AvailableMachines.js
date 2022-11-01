@@ -21,7 +21,7 @@ export default function AvailableMachines() {
             <div className="notification-text">1</div>
           </div>
           <div className="wm-icon">
-            <img src={dryerMachine} alt="Icon of a dryer machine" />
+            <img src={dryerMachine} alt="Icon of a dryer machine" id="dry"/>
           </div>
           <p>Available dryers</p>
         </li>
