@@ -651,7 +651,7 @@ body {
   height: auto;
 }
 
-#wash {
+#wash, #dry {
   width: 78px;
 }
 
