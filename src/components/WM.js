@@ -8,7 +8,7 @@ export default function WM() {
       {LaundryData.map((machine, i) => {
           // Return the element. Also pass key
           console.log(machine);
-          return <Machine no={machine.no} type={machine.type} available={machine.available} RemainingTime={machine.RemainingTime} />;
+          return <Machine key={machine.no} no={machine.no} type={machine.type} available={machine.available} RemainingTime={machine.RemainingTime} />;
         })}
     </div>
   )
