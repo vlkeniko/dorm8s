@@ -3,8 +3,7 @@ import React from "react";
 export default function Settings(props) {
   return (
     <div className="settings">
-
-      <hr />
+      <hr className="profile-hr" />
 
       <div className="settings-slider">
         <p className="settings-text">Notifications</p>
@@ -23,10 +22,9 @@ export default function Settings(props) {
       </div>
 
       <div className="view-all">
-        <p className="settings-text">Your dorm8s</p>
-        {props.lease.tenants}
+        <p className="settings-text">Your DORM8s</p>
+        <p className="dorm8s-text">{props.lease.tenants}</p>
       </div>
-
     </div>
   );
 }
