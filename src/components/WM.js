@@ -5,10 +5,10 @@ import { LaundryData } from '../laundry'
 export default function WM() {
   return (
     <div className='machines'>
+      {/* We import the laundry data from a static JSON
+      then iterate through each machine to make a component out of each one */}
       {LaundryData.map((machine, i) => {
-          // Return the element. Also pass key
-          console.log(machine);
-          return <Machine key={machine.no} no={machine.no} type={machine.type} available={machine.available} RemainingTime={machine.RemainingTime} />;
+          return <Machine key={machine.type + machine.no} no={machine.no} type={machine.type} available={machine.available} RemainingTime={machine.RemainingTime} />;
         })}
     </div>
   )
