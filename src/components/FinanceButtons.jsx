@@ -71,8 +71,6 @@ export default function FinanceButtons() {
 
       () => {
         setFormData({
-          title: "",
-          description: "",
           image: "",
         });
 
