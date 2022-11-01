@@ -91,6 +91,7 @@ export default function FinanceButtons() {
       }
     );
   };
+  
   return (
     <div>
       <div className="finance-buttons">
