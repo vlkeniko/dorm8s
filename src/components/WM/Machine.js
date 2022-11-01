@@ -11,7 +11,7 @@ export default function Machine(props) {
         }
       >
         <img
-          src={require("../../pictures/laundry.png")}
+          src={require("../../pictures/laundry-white.png")}
           alt="Icon with a washing machine"
         />
       </div>
@@ -23,7 +23,7 @@ export default function Machine(props) {
 
       <button
         /* Here we set the button's styling and an onClick() alert if needed */
-        className={props.available === "yes" ? "bookbutton" : "finance-button"}
+        className={props.available === "yes" ? "bookbutton" : "bookbutton-unavailable"}
         onClick={() =>
           props.available === "no"
             ? alert("You can't book this machine yet!")

@@ -85,7 +85,7 @@ body {
   width: 400px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30%;
+  margin-bottom: 35%;
 }
 
 nav {
@@ -434,6 +434,11 @@ body {
   background-color: var(--available);
 }
 
+.icon img {
+  padding: 7px;
+  width: 40px;
+}
+
 .unavailable {
   background-color: var(--unavailable);
 }
@@ -452,10 +457,41 @@ body {
 
 .bookbutton {
   color: white;
-  /*width: 20%;
-    height: 25px; */
+  width: 35%;
+  height: 25px;
   background-color: #5A6EAB;
   text-transform: uppercase;
+  font-size: 11px;
+  text-align: center;
+  box-shadow: 3px 7px 3px -3px #434656;
+}
+
+.bookbutton-unavailable {
+  color: #5A6EAB;
+  background-color: var(--white);
+  font-size: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  border: none;
+  -webkit-box-shadow: 5px 9px 3px -3px #5A6EAB;
+  box-shadow: 5px 9px 6px -6px #5A6EAB;
+  background-color: #F6FEFD;
+  width: 35%;
+  height: 25px;
+}
+
+.bookbutton-unavailable:hover {
+  color: #5A6EAB;
+  background-color: var(--white);
+  font-size: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  border: none;
+  -webkit-box-shadow: 5px 9px 3px -3px #5A6EAB;
+  box-shadow: 5px 9px 6px -6px #5A6EAB;
+  background-color: #F6FEFD;
 }
 
 
