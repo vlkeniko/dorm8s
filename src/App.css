@@ -321,7 +321,11 @@ body {
   -webkit-box-shadow: 5px 9px 3px -3px #5A6EAB;
   box-shadow: 5px 9px 6px -6px #5A6EAB;
   background-color: #F6FEFD;
+}
 
+#budget {
+  text-align: center;
+  width: 35px;
 }
 
 /*LoginPage*/

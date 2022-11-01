@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { db, storage } from "../firebaseConfig";
 import { useEffect } from "react";
+import budget from "../pictures/budget.png";
 
 export default function FinanceButtons() {
   useEffect(() => {
@@ -96,7 +97,14 @@ export default function FinanceButtons() {
     <div>
       <div className="finance-buttons">
         <a href="https://products.mobilepay.dk/box/invitation?id=2fN8cgSk&fbclid=IwAR22tSZaxhAWlDgbObzgwhKvU8TWUz0zqUpKliVvDQ9uvdFW8Qe9e8sstwQ">
-          <button className="finance-button">Pay kitchen tax</button>
+          <button className="finance-button">
+            <img
+              src={budget}
+              alt="Icon of a washing machine"
+              id="budget"
+            />
+            Pay kitchen tax
+          </button>
         </a>
         {/*Clicking this button will open the modal*/}
         <button className="finance-button" id="myBtn">
