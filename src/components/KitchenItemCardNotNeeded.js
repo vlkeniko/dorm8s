@@ -4,7 +4,6 @@ export default function KitchenItemCardNotNeeded(props) {
   return (
     <div
       id={props.itemid + "stock"}
-      className={props.type}
       style={{ display: props.itemstatus === "needed" ? "none" : "block" }}
       onClick={() => {
         document.getElementById(props.itemid + "stock").style.display = "none";
