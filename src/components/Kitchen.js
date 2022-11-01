@@ -32,7 +32,7 @@ export default function Kitchen() {
               itemstatus={item.status}
               itemname={item.name}
               alttext={item.name}
-              type="to-buy-card"
+              type="kitchenItems-buttons"
               imgsrc={Finances}
               className={item.class}
             />
@@ -50,7 +50,7 @@ export default function Kitchen() {
               itemstatus={item.status}
               itemname={item.name}
               alttext={item.name}
-              type="to-buy-card"
+              type="kitchenItems-buttons"
               imgsrc={Finances}
               className={item.class}
             />

@@ -352,7 +352,7 @@ body {
   justify-content: center;
 }
 
-.to-buy-card {
+/* .to-buy-card {
   height: 70px;
   width: 70px;
   background-color: var(--white);
@@ -362,22 +362,31 @@ body {
   align-items: center;
   text-align: center;
   box-shadow: 4px 4px 3px rgb(199, 199, 199);
-}
+} */
 
 .kitchenItems-buttons {
   height: 70px;
-  width: 70px;
-  background-color: var(--white);
+  width: 100px;
   padding: 5px;
-  border-radius: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: 4px 4px 3px rgb(199, 199, 199);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 30px;
+  -webkit-box-shadow: 3px 7px 3px -3px #5A6EAB;
+  box-shadow: 2px 4px 3px #5A6EAB;
+  background-color: #fff;
 }
 
+.kitchenItems-buttons p {
+  color: #5A6EAB;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-.in-house-card {
+/* .in-house-card {
   height: 70px;
   width: 70px;
   background-color: var(--white);
@@ -387,8 +396,7 @@ body {
   align-items: center;
   text-align: center;
   box-shadow: 4px 4px 3px rgb(199, 199, 199);
-
-}
+} */
 
 .previousreservation {
   margin-left: 5%;
