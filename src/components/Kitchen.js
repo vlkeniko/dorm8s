@@ -39,7 +39,7 @@ export default function Kitchen() {
       </div>
       <h2>In house</h2>
       <div className="card-container">
-        {/* Iterating through each machine to make a component out of each one */}
+        {/* Iterating through each item to make a component out of each one */}
         {items.map((item, i) => {
           return (
             <KitchenItemCardNotNeeded
