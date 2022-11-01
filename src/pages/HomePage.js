@@ -61,7 +61,7 @@ export default function HomePage() {
       <p>You are logged in as {currentuser.username}</p> */}
       <h1 className="header-title">
         {JSON.parse(localStorage.getItem("loggedinname"))
-          ? `Hello ${JSON.parse(localStorage.getItem("loggedinname"))}`
+          ? `Hello, ${JSON.parse(localStorage.getItem("loggedinname"))}`
           : ""}
       </h1>
       <Balance balance={balance} />
