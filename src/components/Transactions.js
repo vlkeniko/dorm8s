@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function Transactions() {
   return (
@@ -6,7 +6,9 @@ export default function Transactions() {
       <div className="transaction">
         <h3 className="transaction-name">Kitchen tax paid</h3>
         <p className="transaction-date">12.10.2022</p>
-        <p className="transaction-amount" id="red-money">-38.25 kr.</p>
+        <p className="transaction-amount" id="red-money">
+          -38.25 kr.
+        </p>
         <hr className="transactions-hr" />
       </div>
 
@@ -36,7 +38,9 @@ export default function Transactions() {
       <div className="transaction">
         <h3 className="transaction-name">Kitchen tax paid</h3>
         <p className="transaction-date">12.10.2022</p>
-        <p className="transaction-amount" id="red-money">-94.17 kr.</p>
+        <p className="transaction-amount" id="red-money">
+          -94.17 kr.
+        </p>
       </div>
     </div>
   );
