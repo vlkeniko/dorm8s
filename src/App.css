@@ -293,7 +293,8 @@ body {
   justify-content: center;
 }
 
-.finance-button {
+.finance-button,
+.bookbutton {
   color: #5A6EAB;
   font-size: 16px;
   background-color: var(--white);
@@ -307,7 +308,8 @@ body {
 
 }
 
-.finance-button:hover {
+.finance-button:hover,
+.bookbutton:hover {
   color: #5A6EAB;
   background-color: var(--white);
   font-size: 16px;
@@ -401,8 +403,15 @@ body {
 
 .machine .icon {
   /* background-color: var(--unavailable); */
-  background-color: var(--available);
   border-radius: 20%;
+}
+
+.available {
+  background-color: var(--available);
+}
+
+.unavailable {
+  background-color: var(--unavailable);
 }
 
 .availability {
@@ -419,8 +428,9 @@ body {
 
   .bookbutton {
     color: white;
-    width: 20%;
-    height: 25px;
+    /*width: 20%;
+    height: 25px; */
+    background-color: #5A6EAB;
     text-transform: uppercase;
   }
 
