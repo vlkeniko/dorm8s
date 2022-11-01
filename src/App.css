@@ -365,14 +365,11 @@ body {
 } */
 
 .kitchenItems-buttons {
-  height: 70px;
-  width: 100px;
-  padding: 5px;
+  height: 100px;
+  padding: 20px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
   border-radius: 30px;
   -webkit-box-shadow: 3px 7px 3px -3px #5A6EAB;
   box-shadow: 2px 4px 3px #5A6EAB;
