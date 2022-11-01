@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Balance from "../components/Balance";
 import Calendar from "../components/Calendar";
 import Nav from "../components/Nav";
 import AvailableMachines from "../components/AvailableMachines";
 import ProfileNav from "../components/ProfileNav";
-import { endpoint, getFromEndpoint } from "../utils/database_functions.js";
 
 export default function HomePage() {
   /* if loggedinbalance is missing from localStorage for whatever reason
