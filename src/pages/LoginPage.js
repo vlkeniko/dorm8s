@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
 
 export function forceHomePage(time) {
   setTimeout(() => {
-    window.location.href = "/home"
-  }, time)
+    window.location.href = "/home";
+  }, time);
 }
 
 // 📁 pages/HomePage.js
@@ -35,8 +35,6 @@ export default function LoginPage() {
         setUsers(result);
       });
   };
-
-  console.log(users);
 
   useEffect(() => {
     getUsers();
@@ -68,6 +66,7 @@ export default function LoginPage() {
             username: user.username,
           };
 
+          // Setting user data to localStorage
           localStorage.setItem("loggedinid", JSON.stringify(user.id));
           localStorage.setItem("loggedinname", JSON.stringify(user.username));
           localStorage.setItem("loggedinbalance", JSON.stringify(user.balance));
@@ -120,14 +119,12 @@ export default function LoginPage() {
         <Nav />
       </>
     );
-  }
-  else {
+  } else {
     return (
       <>
         <h2>You are now logged in.</h2>
         {forceHomePage(1500)}
         <Nav />
-        
       </>
     );
   }

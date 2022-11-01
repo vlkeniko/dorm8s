@@ -1,4 +1,5 @@
-export let endpoint = "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app";
+export let endpoint =
+  "https://dorm8s-default-rtdb.europe-west1.firebasedatabase.app";
 
 export async function getFromEndpoint(url) {
   const response = await fetch(url);
