@@ -15,7 +15,7 @@ export default function Machine(props) {
           alt="Icon with a washing machine"
         />
       </div>
-      <p className="number">{props.no}</p>
+      <p className="number">{(props.type === "wash" ? "WM " : "Dryer ") + "#" + props.no}</p>
       <p className="availability">
         {/* Here we set the text */}
         {props.available === "yes" ? "Available" : "Time left"}
