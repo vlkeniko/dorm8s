@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Nav from "../components/Nav";
 
 export function forceHomePage(time) {
   setTimeout(() => {
@@ -109,7 +108,6 @@ export default function LoginPage() {
         </form>
 
         <p>name, password</p>
-        <Nav />
       </>
     );
   } else {
@@ -117,7 +115,6 @@ export default function LoginPage() {
       <>
         <h2>You are now logged in.</h2>
         {forceHomePage(1500)}
-        <Nav />
       </>
     );
   }
