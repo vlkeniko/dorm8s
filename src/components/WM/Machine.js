@@ -6,6 +6,9 @@ export default function Machine(props) {
     console.log(document.getElementById(id).style);
     document.getElementById(id).style.backgroundColor = "#E48B94";
     document.getElementById("availability" + id).innerHTML = "Reserved";
+    document.getElementById("button" + id).classList.remove("bookbutton");
+    document.getElementById("button" + id).classList.add("bookbutton-unavailable");
+    document.getElementById("button" + id).innerHTML = "booked";
   }
 
   return (
@@ -34,6 +37,7 @@ export default function Machine(props) {
         className={
           props.available === "yes" ? "bookbutton" : "bookbutton-unavailable"
         }
+        id={"button" + (props.type === "wash" ? "wm" : "dm") + props.no}
         onClick={() =>
           props.available === "no"
             ? alert("You can't book this machine yet!")

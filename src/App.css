@@ -461,6 +461,9 @@ body {
   font-size: 11px;
   text-align: center;
   box-shadow: 3px 7px 3px -3px #434656;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bookbutton-unavailable {
@@ -476,6 +479,9 @@ body {
   background-color: #F6FEFD;
   width: 35%;
   height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bookbutton-unavailable:hover {
@@ -489,6 +495,9 @@ body {
   -webkit-box-shadow: 5px 9px 3px -3px #5A6EAB;
   box-shadow: 5px 9px 6px -6px #5A6EAB;
   background-color: #F6FEFD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
